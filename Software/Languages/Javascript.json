@@ -1,0 +1,652 @@
+{
+  "title": "Javascript programming language",
+  "description": "A comprehensive guide to JavaScript fundamentals.",
+  "code": "// This is an example JavaScript code.",
+  "blocks": [
+    {
+      "type": "Lesson",
+      "title": "Basics",
+      "description": "JavaScript is a versatile, high-level programming language primarily used to add interactivity to web pages. It is also used in a variety of other environments, including server-side development (Node.js) and mobile app development.",
+      "code": null,
+      "blocks": []
+    },
+    {
+      "type": "Test",
+      "title": "Basics - Quiz",
+      "description": "Test your knowledge of JavaScript basics.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "What is JavaScript primarily used for?",
+          "code": null,
+          "options": [
+            "Creating server-side applications.",
+            "Adding interactivity to web pages.",
+            "Styling web pages.",
+            "Managing databases."
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 2",
+          "description": "Besides web browsers, where else is JavaScript used?",
+          "code": null,
+          "options": [
+            "Operating Systems",
+            "Hardware design",
+            "Server-side development (Node.js)",
+            "Desktop applications"
+          ],
+          "answer": "3"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Write in output",
+      "description": "JavaScript provides several ways to output data. The most common is using the console for debugging and the DOM (Document Object Model) for displaying content on a webpage.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Console Log",
+          "description": "Outputs messages to the browser's developer console. Useful for debugging.",
+          "code": "console.log(\"Hello, JavaScript!\");",
+          "result": "Hello, JavaScript!",
+           "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Alert",
+          "description": "Displays a popup alert box in the browser. Generally avoided in modern web development.",
+          "code": "alert(\"This is an alert!\");",
+          "result": "This is an alert!",
+          "resultType": "browser",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Writing to the HTML document",
+          "description": "Outputs directly to the HTML document. Use with caution, as it can overwrite existing content.",
+          "code": "document.write(\"Hello from document.write!\");",
+          "result": "Hello from document.write!",
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Write in output - Quiz",
+      "description": "Test your knowledge about output methods in JavaScript",
+      "code": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "Which method is primarily used for debugging in JavaScript?",
+          "code": null,
+          "options": [
+            "alert()",
+            "document.write()",
+            "console.log()",
+            "innerHTML"
+          ],
+          "answer": "3"
+        },
+        {
+          "title": "Question 2",
+          "description": "Which method should be used cautiously, as it can overwrite existing content?\n",
+          "code": null,
+           "options": [
+            "alert()",
+            "document.write()",
+            "console.log()",
+            "innerHTML"
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Variables",
+      "description": "Variables are used to store data in JavaScript. You declare variables using `var`, `let`, or `const`. `let` and `const` are preferred for modern JavaScript.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Variable Declaration with 'var'",
+          "description": "Variables declared with `var` have function scope or global scope if declared outside a function.  Avoid using `var` in modern JavaScript.",
+          "code": "var oldVariable = 'This is an old variable'; // Avoid using var in newer code",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Variable Declaration with 'let'",
+          "description": "`let` declares a block-scoped variable. It's the preferred way to declare variables in modern JavaScript when the value might change.",
+          "code": "let newVariable = 'This variable can be reassigned';\nnewVariable = 'New value'; // Allowed",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Variable Declaration with 'const'",
+          "description": "`const` declares a block-scoped constant. The value cannot be reassigned after initialization. `const` does not make the content immutable, e.g. when used with objects.",
+          "code": "const constantVariable = 'This value cannot be changed';",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Variables - Quiz",
+      "description": "Test your knowledge of variable declarations.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "Which keyword should be primarily used for declaring variables in modern JavaScript?",
+          "code": null,
+          "options": [
+            "var",
+            "const",
+            "let",
+            "global"
+          ],
+          "answer": "3"
+        },
+        {
+          "title": "Question 2",
+          "description": "What is the scope of a variable declared with `let`?",
+          "code": null,
+          "options": [
+            "Global scope",
+            "Function scope",
+            "Block scope",
+            "Module scope"
+          ],
+          "answer": "3"
+        },
+        {
+          "title": "Question 3",
+          "description": "Which keyword is used to declare a constant variable?",
+          "code": null,
+          "options": [
+            "var",
+            "const",
+            "let",
+            "static"
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Constants",
+      "description": "Constants are variables whose values cannot be reassigned after they are initialized. Use `const` to declare constants.",
+      "code": "const PI = 3.14159;\n// PI = 3.14; // This would cause an error because you can't reassign a constant.",
+      "result": null,
+      "resultType": "simulated",
+      "blocks": []
+    },
+    {
+      "type": "Test",
+      "title": "Constants - Quiz",
+      "description": "Test your knowledge of the constants.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "Which keyword is used to declare a constant in JavaScript?",
+          "code": null,
+          "options": [
+            "var",
+            "let",
+            "const",
+            "static"
+          ],
+          "answer": "3"
+        },
+         {
+          "title": "Question 2",
+          "description": "Can you reassign a constant value after it has been initialized?",
+          "code": null,
+          "options": [
+            "Yes",
+            "No",
+            "Only if it's an object",
+             "Only within the same block"
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Comments",
+      "description": "Comments are notes in your code that are ignored by the JavaScript engine. Use comments to explain your code.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Single-line comment example",
+          "description": "Use `//` to create a single-line comment.",
+          "code": "// This is a single-line comment.  It is ignored by the JavaScript engine.",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Multi-line comment example",
+          "description": "Use `/* ... */` to create a multi-line comment.",
+          "code": "/*\nThis is a multi-line comment.\nIt can span across multiple lines.\n*/",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Comments - Quiz",
+      "description": "Test your knowledge about the javascript comments.",
+      "code": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "How do you create a single-line comment in JavaScript?",
+          "code": null,
+          "options":[
+            "// This is a comment",
+            "/* This is a comment */",
+            "' This is a comment",
+            "<!-- This is a comment -->"
+          ],
+          "answer": "1"
+        },
+         {
+          "title": "Question 2",
+          "description": "How do you create a multi-line comment in JavaScript?",
+          "code": null,
+          "options":[
+            "// This is a comment",
+            "/* This is a comment */",
+            "' This is a comment",
+            "<!-- This is a comment -->"
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Functions",
+      "description": "Functions are blocks of reusable code. They can take inputs (parameters) and return outputs. Use `function` or arrow function syntax.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Function Declaration Example",
+          "description": "Shows a basic function declaration.",
+          "code": "function add(a, b) {\n  return a + b;\n}\n\nlet sum = add(5, 3); // sum is 8\nconsole.log(sum);",
+          "result": "8",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Arrow Function Example",
+          "description": "Shows an arrow function, a more concise syntax for functions.",
+          "code": "const multiply = (x, y) => x * y;\n\nlet product = multiply(4, 6); // product is 24\nconsole.log(product);",
+          "result": "24",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Function with no return",
+          "description": "Functions don't have to return a value, they can perform actions.",
+          "code": "function logMessage(message) {\n  console.log(message);\n}\n\nlogMessage(\"This is a log message.\");",
+          "result": "This is a log message.",
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Functions - Quiz",
+      "description": "Test your knowledge about the javascript functions.",
+      "code": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "Which keyword is used to declare a function in JavaScript?",
+          "code": null,
+          "options":[
+            "def",
+            "func",
+            "function",
+            "method"
+          ],
+          "answer": "3"
+        },
+         {
+          "title": "Question 2",
+          "description": "What is an arrow function?",
+          "code": null,
+          "options":[
+            "A type of loop.",
+            "A concise way to define a function.",
+            "A way to declare variables.",
+            "A built-in JavaScript object."
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 3",
+          "description": "Do functions always have to return a value?",
+          "code": null,
+          "options":[
+            "Yes",
+            "No",
+            "Only arrow functions need to return values.",
+            "Only functions declared with 'function' keyword need to return values"
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Data Types",
+      "description": "JavaScript has several built-in data types. Understanding these is fundamental to working with JavaScript.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "String",
+          "description": "Represents text.",
+          "code": "let myString = \"Hello, world!\";\nconsole.log(myString);",
+          "result": "Hello, world!",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Number",
+          "description": "Represents numerical values, both integers and floating-point numbers.",
+          "code": "let myNumber = 10;\nlet myFloat = 3.14;\nconsole.log(myNumber, myFloat);",
+          "result": "10 3.14",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Boolean",
+          "description": "Represents a logical entity and can have two values: true or false.",
+          "code": "let isTrue = true;\nlet isFalse = false;\nconsole.log(isTrue, isFalse);",
+          "result": "true false",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Null",
+          "description": "Represents the intentional absence of a value. It is an assignment value, meaning it can be assigned to a variable.",
+          "code": "let myNull = null;\nconsole.log(myNull);",
+          "result": "null",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Undefined",
+          "description": "Represents a variable that has been declared but not assigned a value.",
+          "code": "let myUndefined;\nconsole.log(myUndefined); // Output: undefined",
+          "result": "undefined",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Symbol",
+          "description": "Represents a unique and immutable data type, often used as object property keys.",
+          "code": "const sym1 = Symbol('foo');\nconst sym2 = Symbol('foo');\nconsole.log(sym1 === sym2); // false",
+          "result": "false",
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Data Types - Quiz",
+      "description": "Test your knowledge on javascript data types.",
+      "code": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "Which data type is used to represent text?",
+          "code": null,
+          "options":[
+            "Number",
+            "Boolean",
+            "String",
+            "Symbol"
+          ],
+          "answer": "3"
+        },
+         {
+          "title": "Question 2",
+          "description": "Which value represents the intentional absence of a value?",
+          "code": null,
+          "options":[
+            "undefined",
+            "null",
+            "0",
+            "\"\""
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 3",
+          "description": "What is the result of typeof undefined?",
+          "code": null,
+          "options":[
+            "undefined",
+            "null",
+            "string",
+            "object"
+          ],
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Variable Scope",
+      "description": "Understanding variable scope is crucial to avoid unexpected behavior. Scope refers to where a variable is accessible within your code.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Global Scope Example",
+          "description": "Variables declared outside of any function have global scope.",
+          "code": "let globalVariable = 'This is a global variable';\n\nfunction showGlobal() {\n  console.log(globalVariable);  // Accessing the global variable\n}\n\nshowGlobal();  // Output: This is a global variable\nconsole.log(globalVariable);  // Output: This is a global variable",
+          "result": "This is a global variable\nThis is a global variable",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Function Scope Example",
+          "description": "Variables declared inside a function have function scope, accessible only within that function.",
+          "code": "function myFunction() {\n  let functionScoped = 'This is function-scoped';\n  console.log(functionScoped);\n}\n\nmyFunction(); // Output: This is function-scoped\n// console.log(functionScoped); // Error: functionScoped is not defined outside of the function.",
+          "result": "This is function-scoped",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Block Scope Example",
+          "description": "Variables declared with `let` or `const` inside a block (e.g., inside an `if` statement or loop) have block scope, accessible only within that block.",
+          "code": "if (true) {\n  let blockScoped = 'This is block-scoped';\n  console.log(blockScoped); // Output: This is block-scoped\n}\n// console.log(blockScoped); // Error: blockScoped is not defined outside of the block",
+          "result": "This is block-scoped",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Scope with var",
+          "description": "Variables declared with `var` inside a function  have function scope, regardless of whether they are declared inside a block or not, `var` does not respect the block scope.",
+          "code": "function testVar() {\n  if (true) {\n    var varScoped = 'I am var scoped';\n    console.log(varScoped); // Output: I am var scoped\n  }\n  console.log(varScoped); // Output: I am var scoped (because var is function-scoped)\n}\n\ntestVar();",
+          "result": "I am var scoped\nI am var scoped",
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Variable Scope - Quiz",
+      "description": "Test your understanding of JavaScript variable scope.",
+      "code": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "What is the scope of a variable declared outside of any function?",
+          "code": null,
+          "options":[
+            "Function scope",
+            "Block scope",
+            "Global scope",
+            "Local scope"
+          ],
+          "answer": "3"
+        },
+         {
+          "title": "Question 2",
+          "description": "Which keyword has function scope?",
+          "code": null,
+          "options":[
+           "let",
+            "const",
+            "var",
+            "none of the above"
+          ],
+          "answer": "3"
+        },
+        {
+          "title": "Question 3",
+          "description": "Where is a variable declared with `let` or `const` accessible?",
+          "code": null,
+          "options":[
+            "Inside the function it is declared in.",
+            "Inside the block it is declared in.",
+            "Globally accessible.",
+            "Only within the same line of code."
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Operators",
+      "description": "JavaScript provides various operators to perform operations on values.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Arithmetic Operators Example",
+          "description": "Examples for each operator to show the functionalities.",
+          "code": "let addition = 10 + 2; // 12\nlet subtraction = 10 - 2; // 8\nlet multiplication = 10 * 2; // 20\nlet division = 10 / 2; // 5\nlet modulus = 10 % 3;   // 1\nconsole.log(addition, subtraction, multiplication, division, modulus);",
+          "result": "12 8 20 5 1",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Assignment Operators Example",
+          "description": "Shows different ways to assign values to variables.",
+          "code": "let a = 10; \na += 5;   // a = a + 5;   a is now 15\na -= 3;   // a = a - 3;   a is now 12\na *= 2;   // a = a * 2;   a is now 24\na /= 4;   // a = a / 4;   a is now 6\na %= 5;   // a = a % 5;   a is now 1\nconsole.log(a); // Output: 1",
+          "result": "1",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Comparison Operators Example",
+          "description": "Examples to compare the variables values",
+          "code": "let x = 5;\nlet y = '5';\n\nconsole.log(x == y);  // true (loose equality)\nconsole.log(x === y); // false (strict equality)\nconsole.log(x != y);  // false (loose inequality)\nconsole.log(x !== y); // true (strict inequality)\nconsole.log(x > 3);   // true\nconsole.log(x < 10);  // true\nconsole.log(x >= 5);  // true\nconsole.log(x <= 5);  // true",
+          "result": "true\nfalse\nfalse\ntrue\ntrue\ntrue\ntrue\ntrue",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Logical Operators Example",
+          "description": "Demonstrates the use of logical operators",
+          "code": "let p = true;\nlet q = false;\n\nconsole.log(p && q); // false (AND)\nconsole.log(p || q); // true (OR)\nconsole.log(!p);   // false (NOT)\nconsole.log(!q);   // true (NOT)",
+          "result": "false\ntrue\nfalse\ntrue",
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Operators - Quiz",
+      "description": "Test your knowledge on javascript operators",
+      "code": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "What operator is used for strict equality in JavaScript?",
+          "code": null,
+          "options":[
+            "==",
+            "===",
+            "!=",
+            "!=="
+          ],
+          "answer": "2"
+        },
+         {
+          "title": "Question 2",
+          "description": "What is the result of `true && false`?",
+          "code": null,
+          "options":[
+           "true",
+            "false",
+            "NaN",
+            "undefined"
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 3",
+          "description": "What does the modulus operator (%) do?",
+          "code": null,
+          "options":[
+            "Adds two numbers",
+            "Subtracts two numbers",
+            "Returns the remainder of a division",
+            "Multiplies two numbers."
+          ],
+          "answer": "3"
+        }
+      ]
+    }
+  ]
+}
