@@ -12,48 +12,25 @@
                         "level": 1,
                         "title": "Basic",
                         "url": "Software/Languages/Javascript.json"
+                    },
+                    {
+                        "level": 1,
+                        "title": "Intermediate",
+                        "url": "Software/Languages/Javascript2.json"
                     }
                 ]
             },
             {
                 "id": 2,
                 "title": "C#",
-                "description": "C# for beginners."
-            },
-            {
-                "id": 3,
-                "title": "Go",
-                "description": "Get started with Golang."
-            },
-            {
-                "id": 4,
-                "title": "Kotlin",
-                "description": "Kotlin basics."
-            },
-            {
-                "id": 5,
-                "title": "Python",
-                "description": "Python programming guide."
-            },
-            {
-                "id": 6,
-                "title": "Swift",
-                "description": "Swift programming guide."
-            },
-            {
-                "id": 7,
-                "title": "Typescript",
-                "description": "Learn Typescript fundamentals."
-            },
-            {
-                "id": 8,
-                "title": "CPlusPlus",
-                "description": "C++ programming guide."
-            },
-            {
-                "id": 9,
-                "title": "Dart",
-                "description": "Dart programming guide."
+                "description": "C# for beginners.",
+                "levels": [
+                    {
+                        "level": 1,
+                        "title": "Basic",
+                        "url": "Software/Languages/CSharp.json"
+                    }
+                ]
             }
         ]
     }
