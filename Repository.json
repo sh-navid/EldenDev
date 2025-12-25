@@ -1,1 +1,60 @@
-
+[
+    {
+        "category": "Programming Language",
+        "description": "",
+        "courses": [
+            {
+                "id": 1,
+                "title": "JavaScript",
+                "description": "Learn JavaScript fundamentals.",
+                "levels": [
+                    {
+                        "level": 1,
+                        "title": "Javascript Basics",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "C#",
+                "description": "C# for beginners."
+            },
+            {
+                "id": 3,
+                "title": "Go",
+                "description": "Get started with Golang."
+            },
+            {
+                "id": 4,
+                "title": "Kotlin",
+                "description": "Kotlin basics."
+            },
+            {
+                "id": 5,
+                "title": "Python",
+                "description": "Python programming guide."
+            },
+            {
+                "id": 6,
+                "title": "Swift",
+                "description": "Swift programming guide."
+            },
+            {
+                "id": 7,
+                "title": "Typescript",
+                "description": "Learn Typescript fundamentals."
+            },
+            {
+                "id": 8,
+                "title": "CPlusPlus",
+                "description": "C++ programming guide."
+            },
+            {
+                "id": 9,
+                "title": "Dart",
+                "description": "Dart programming guide."
+            }
+        ]
+    }
+]
