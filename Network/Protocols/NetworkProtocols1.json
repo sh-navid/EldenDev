@@ -18,17 +18,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Reliable, connection-oriented data transfer.",
+          "description": "Function: Reliable, connection-oriented data transfer.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Web browsing, email (HTTP, SMTP).",
+          "description": "Used for: Web browsing, email (HTTP, SMTP).",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: Higher overhead due to connection establishment and error checking.",
+          "description": "Considerations: Higher overhead due to connection establishment and error checking.",
           "blocks": []
         }
       ]
@@ -41,17 +41,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Connectionless, unreliable data transfer.",
+          "description": "Function: Connectionless, unreliable data transfer.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Video streaming, online gaming.",
+          "description": "Used for: Video streaming, online gaming.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: Unreliable; data may be lost or arrive out of order.",
+          "description": "Considerations: Unreliable; data may be lost or arrive out of order.",
           "blocks": []
         }
       ]
@@ -132,17 +132,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Routing and addressing of data packets.",
+          "description": "Function: Routing and addressing of data packets.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Provides the addressing scheme for devices on the internet.",
+          "description": "Provides the addressing scheme for devices on the internet.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: Connectionless and unreliable; TCP and UDP build on top.",
+          "description": "Considerations: Connectionless and unreliable; TCP and UDP build on top.",
           "blocks": []
         }
       ]
@@ -155,17 +155,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Transferring web resources (HTML, images, etc.).",
+          "description": "Function: Transferring web resources (HTML, images, etc.).",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Web browsing.",
+          "description": "Used for: Web browsing.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: Stateless protocol.",
+          "description": "Considerations: Stateless protocol.",
           "blocks": []
         }
       ]
@@ -246,17 +246,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Secure web communication.",
+          "description": "Function: Secure web communication.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Secure web browsing, online transactions.",
+          "description": "Used for: Secure web browsing, online transactions.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: Requires SSL/TLS certificates; adds overhead.",
+          "description": "Considerations: Requires SSL/TLS certificates; adds overhead.",
           "blocks": []
         }
       ]
@@ -269,17 +269,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Translates domain names to IP addresses.",
+          "description": "Function: Translates domain names to IP addresses.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Resolving domain names.",
+          "description": "Used for: Resolving domain names.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: Critical for internet functionality; DNS server performance matters.",
+          "description": "Considerations: Critical for internet functionality; DNS server performance matters.",
           "blocks": []
         }
       ]
@@ -360,17 +360,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Sending email messages.",
+          "description": "Function: Sending email messages.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Sending emails.",
+          "description": "Used for: Sending emails.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: Primarily for outgoing mail.",
+          "description": "Considerations: Primarily for outgoing mail.",
           "blocks": []
         }
       ]
@@ -383,17 +383,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Retrieving email.",
+          "description": "Function: Retrieving email.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Receiving emails by downloading them to a client.",
+          "description": "Used for: Receiving emails by downloading them to a client.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations:  May not be suitable for accessing email from multiple devices.",
+          "description": "Considerations:  May not be suitable for accessing email from multiple devices.",
           "blocks": []
         }
       ]
@@ -474,17 +474,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Retrieving email.",
+          "description": "Function: Retrieving email.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Accessing emails from multiple devices.",
+          "description": "Used for: Accessing emails from multiple devices.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: More flexible for multiple device access.",
+          "description": "Considerations: More flexible for multiple device access.",
           "blocks": []
         }
       ]
@@ -497,17 +497,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Transferring files.",
+          "description": "Function: Transferring files.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: File uploads and downloads.",
+          "description": "Used for: File uploads and downloads.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: Insecure (plaintext). Use SFTP or FTPS.",
+          "description": "Considerations: Insecure (plaintext). Use SFTP or FTPS.",
           "blocks": []
         }
       ]
@@ -588,17 +588,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Secure file transfer.",
+          "description": "Function: Secure file transfer.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Secure file uploads and downloads.",
+          "description": "Used for: Secure file uploads and downloads.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: More secure than FTP; requires an SSH server.",
+          "description": "Considerations: More secure than FTP; requires an SSH server.",
           "blocks": []
         }
       ]
@@ -611,17 +611,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Secure file transfer.",
+          "description": "Function: Secure file transfer.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Secure file uploads and downloads.",
+          "description": "Used for: Secure file uploads and downloads.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: More secure than FTP; requires SSL/TLS certificates.",
+          "description": "Considerations: More secure than FTP; requires SSL/TLS certificates.",
           "blocks": []
         }
       ]
@@ -702,17 +702,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Secure remote access.",
+          "description": "Function: Secure remote access.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Secure remote access and server administration.",
+          "description": "Used for: Secure remote access and server administration.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: Uses encryption; essential for remote server management.",
+          "description": "Considerations: Uses encryption; essential for remote server management.",
           "blocks": []
         }
       ]
@@ -725,17 +725,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Remote terminal access.",
+          "description": "Function: Remote terminal access.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Remote access.",
+          "description": "Used for: Remote access.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: Unsecured (plaintext); use SSH instead.",
+          "description": "Considerations: Unsecured (plaintext); use SSH instead.",
           "blocks": []
         }
       ]
@@ -816,17 +816,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Automatic IP address assignment.",
+          "description": "Function: Automatic IP address assignment.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Assigning IP addresses and network settings.",
+          "description": "Used for: Assigning IP addresses and network settings.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: Simplifies network administration.",
+          "description": "Considerations: Simplifies network administration.",
           "blocks": []
         }
       ]
@@ -839,17 +839,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Maps IP to MAC addresses.",
+          "description": "Function: Maps IP to MAC addresses.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Local network communication.",
+          "description": "Used for: Local network communication.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: Essential for local network communication.",
+          "description": "Considerations: Essential for local network communication.",
           "blocks": []
         }
       ]
@@ -930,17 +930,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Error reporting and diagnostics.",
+          "description": "Function: Error reporting and diagnostics.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: Ping, traceroute.",
+          "description": "Used for: Ping, traceroute.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: Important for troubleshooting network connectivity.",
+          "description": "Considerations: Important for troubleshooting network connectivity.",
           "blocks": []
         }
       ]
@@ -953,17 +953,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Manages multicast group memberships.",
+          "description": "Function: Manages multicast group memberships.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for: IPTV, video conferencing.",
+          "description": "Used for: IPTV, video conferencing.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations:  Used in applications that stream to multiple recipients.",
+          "description": "Considerations:  Used in applications that stream to multiple recipients.",
           "blocks": []
         }
       ]
@@ -1044,17 +1044,17 @@
       "blocks": [
         {
           "type": "BulletPoint",
-          "text": "Function: Network device monitoring and management.",
+          "description": "Function: Network device monitoring and management.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Used for:  Monitoring network devices.",
+          "description": "Used for:  Monitoring network devices.",
           "blocks": []
         },
         {
           "type": "BulletPoint",
-          "text": "Considerations: Allows administrators to monitor and manage devices.",
+          "description": "Considerations: Allows administrators to monitor and manage devices.",
           "blocks": []
         }
       ]
@@ -1067,17 +1067,17 @@
         "blocks": [
           {
             "type": "BulletPoint",
-            "text": "Function: Real-time, two-way communication.",
+            "description": "Function: Real-time, two-way communication.",
             "blocks": []
           },
           {
             "type": "BulletPoint",
-            "text": "Used for: Chat applications, online games, real-time data updates.",
+            "description": "Used for: Chat applications, online games, real-time data updates.",
             "blocks": []
           },
           {
             "type": "BulletPoint",
-            "text": "Considerations: Enables real-time, low-latency communication.",
+            "description": "Considerations: Enables real-time, low-latency communication.",
             "blocks": []
           }
         ]
