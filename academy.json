@@ -1,37 +1,65 @@
 [
-    {
-        "category": "Programming Language",
-        "description": "",
-        "courses": [
-            {
-                "id": 1,
-                "title": "JavaScript",
-                "description": "Learn JavaScript fundamentals.",
-                "levels": [
-                    {
-                        "level": 1,
-                        "title": "Basic",
-                        "url": "Software/Languages/Javascript.json"
-                    },
-                    {
-                        "level": 1,
-                        "title": "Intermediate",
-                        "url": "Software/Languages/Javascript2.json"
-                    }
-                ]
-            },
-            {
-                "id": 2,
-                "title": "C#",
-                "description": "C# for beginners.",
-                "levels": [
-                    {
-                        "level": 1,
-                        "title": "Basic",
-                        "url": "Software/Languages/CSharp.json"
-                    }
-                ]
-            }
+  {
+    "category": "Programming Languages",
+    "description": "Explore the world of programming languages and their practical applications.",
+    "courses": [
+      {
+        "id": 1,
+        "title": "JavaScript",
+        "description": "Master the fundamentals of JavaScript, a versatile language for web development.",
+        "levels": [
+          {
+            "level": 1,
+            "title": "Basic",
+            "url": "Software/Languages/Javascript1.json"
+          },
+          {
+            "level": 2,
+            "title": "Intermediate",
+            "url": "Software/Languages/Javascript2.json"
+          }
         ]
-    }
+      },
+      {
+        "id": 2,
+        "title": "C#",
+        "description": "Learn C# and build robust applications with this powerful language.",
+        "levels": [
+          {
+            "level": 1,
+            "title": "Basic",
+            "url": "Software/Languages/CSharp1.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Network",
+    "description": "Understand the concepts and technologies that form the foundation of modern networks.",
+    "courses": [
+      {
+        "id": 1,
+        "title": "Network Protocols",
+        "description": "Dive deep into network protocols and their role in data communication.",
+        "levels": [
+          {
+            "level": 1,
+            "title": "Basic",
+            "url": "Network/Protocols/NetworkProtocols1.json"
+          },
+          {
+            "level": 2,
+            "title": "Intermediate",
+            "url": "Network/Protocols/NetworkProtocols2.json"
+          },
+          {
+            "level": 3,
+            "title": "Advanced",
+            "url": "Network/Protocols/NetworkProtocols3.json"
+          }
+        ]
+      }
+    ]
+  }
 ]
