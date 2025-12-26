@@ -1,0 +1,1130 @@
+{
+  "title": "20 Basic Network Protocols",
+  "description": "An overview of 20 fundamental network protocols with quizzes.",
+  "code": null,
+  "blocks": [
+    {
+      "type": "Lesson",
+      "title": "Introduction",
+      "description": "This guide provides an overview of 20 essential network protocols, covering their primary functions and significant considerations. Understanding these protocols is crucial for anyone working with networks.",
+      "code": null,
+      "blocks": []
+    },
+    {
+      "type": "Lesson",
+      "title": "TCP (Transmission Control Protocol)",
+      "description": "Provides reliable, connection-oriented, and ordered data transmission. Used where data integrity is critical.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Reliable, connection-oriented data transfer.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Web browsing, email (HTTP, SMTP).",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: Higher overhead due to connection establishment and error checking.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "UDP (User Datagram Protocol)",
+      "description": "Provides connectionless, unreliable datagram transmission. Faster than TCP.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Connectionless, unreliable data transfer.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Video streaming, online gaming.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: Unreliable; data may be lost or arrive out of order.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "TCP/UDP Quiz",
+      "description": "Test your knowledge of TCP and UDP.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "Which protocol is connection-oriented?",
+          "code": null,
+          "options": [
+            "TCP",
+            "UDP",
+            "IP",
+            "HTTP"
+          ],
+          "answer": "1"
+        },
+        {
+          "title": "Question 2",
+          "description": "Which protocol is generally faster but less reliable?",
+          "code": null,
+          "options": [
+            "TCP",
+            "UDP",
+            "SMTP",
+            "HTTPS"
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 3",
+          "description": "Which of the following is an example of an application that commonly uses UDP?",
+          "code": null,
+          "options": [
+            "Web Browsing",
+            "Emailing",
+            "Online Gaming",
+            "File Transfer"
+          ],
+          "answer": "3"
+        },
+        {
+          "title": "Question 4",
+          "description": "What is a key disadvantage of UDP?",
+          "code": null,
+          "options": [
+            "It's too slow.",
+            "It requires a connection to be established.",
+            "It is unreliable, and data can be lost.",
+            "It cannot be used for streaming."
+          ],
+          "answer": "3"
+        },
+        {
+          "title": "Question 5",
+          "description": "Which protocol is typically used for email?",
+          "code": null,
+          "options": [
+            "UDP",
+            "TCP",
+            "ICMP",
+            "ARP"
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "IP (Internet Protocol)",
+      "description": "The fundamental protocol for routing data packets across networks. Provides addressing.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Routing and addressing of data packets.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Provides the addressing scheme for devices on the internet.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: Connectionless and unreliable; TCP and UDP build on top.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "HTTP (Hypertext Transfer Protocol)",
+      "description": "Foundation for data communication on the World Wide Web.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Transferring web resources (HTML, images, etc.).",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Web browsing.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: Stateless protocol.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "IP/HTTP Quiz",
+      "description": "Test your knowledge of IP and HTTP",
+      "code": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "Which protocol is responsible for routing data packets across networks?",
+          "code": null,
+          "options": [
+            "TCP",
+            "UDP",
+            "IP",
+            "HTTP"
+          ],
+          "answer": "3"
+        },
+        {
+          "title": "Question 2",
+          "description": "Which protocol is used for web browsing?",
+          "code": null,
+          "options": [
+            "TCP",
+            "UDP",
+            "IP",
+            "HTTP"
+          ],
+          "answer": "4"
+        },
+        {
+          "title": "Question 3",
+          "description": "Is HTTP a stateful or stateless protocol?",
+          "code": null,
+          "options": [
+            "Stateful",
+            "Stateless",
+            "Both",
+            "Neither"
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 4",
+          "description": "What is the primary function of the IP protocol?",
+          "code": null,
+          "options": [
+            "Sending emails",
+            "Transferring files",
+            "Routing data packets",
+            "Establishing secure connections"
+          ],
+          "answer": "3"
+        },
+        {
+          "title": "Question 5",
+          "description": "HTTP typically uses which underlying protocol for reliable data transfer?",
+          "code": null,
+          "options": [
+            "UDP",
+            "TCP",
+            "ICMP",
+            "ARP"
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "HTTPS (Hypertext Transfer Protocol Secure)",
+      "description": "Secure version of HTTP using SSL/TLS encryption.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Secure web communication.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Secure web browsing, online transactions.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: Requires SSL/TLS certificates; adds overhead.",
+          "blocks": []
+        }
+      ]
+    },
+        {
+      "type": "Lesson",
+       "title": "DNS (Domain Name System)",
+      "description": "Translates domain names to IP addresses.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Translates domain names to IP addresses.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Resolving domain names.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: Critical for internet functionality; DNS server performance matters.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "HTTPS/DNS Quiz",
+      "description": "Test your knowledge of HTTPS and DNS.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "What does HTTPS provide that HTTP doesn't?",
+          "code": null,
+          "options": [
+            "Faster data transfer",
+            "Encryption",
+            "More features",
+            "Better Compatibility"
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 2",
+          "description": "What is the primary function of DNS?",
+          "code": null,
+          "options": [
+            "Encrypting web traffic",
+            "Translating domain names to IP addresses",
+            "Sending emails",
+            "Transferring Files"
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 3",
+          "description": "What is required for HTTPS to function?",
+          "code": null,
+          "options": [
+            "A fast internet connection",
+            "Usernames and passwords",
+            "SSL/TLS certificates",
+            "A specific web browser"
+          ],
+          "answer": "3"
+        },
+        {
+          "title": "Question 4",
+          "description": "Why is DNS important for internet users?",
+          "code": null,
+          "options": [
+            "It speeds up web browsing.",
+            "It allows users to remember IP addresses.",
+            "It enables users to use domain names instead of IP addresses.",
+             "It provides better security."
+          ],
+          "answer": "3"
+        },
+        {
+          "title": "Question 5",
+          "description": "If a website uses HTTPS, what will you typically see in the address bar?",
+          "code": null,
+          "options": [
+            "Nothing special",
+            "A lock icon",
+            "A warning message",
+            "A different domain name"
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "SMTP (Simple Mail Transfer Protocol)",
+      "description": "Used for sending email.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Sending email messages.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Sending emails.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: Primarily for outgoing mail.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "POP3 (Post Office Protocol version 3)",
+      "description": "Retrieves email from a mail server. Downloads and typically deletes it.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Retrieving email.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Receiving emails by downloading them to a client.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations:  May not be suitable for accessing email from multiple devices.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "SMTP/POP3 Quiz",
+      "description": "Test your knowledge of SMTP and POP3.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "Which protocol is primarily used for sending emails?",
+          "code": null,
+          "options": [
+            "SMTP",
+            "POP3",
+            "IMAP",
+            "HTTP"
+          ],
+          "answer": "1"
+        },
+        {
+          "title": "Question 2",
+          "description": "Which protocol is associated with retrieving email and often deleting it from the server?",
+          "code": null,
+           "options": [
+            "SMTP",
+            "POP3",
+            "IMAP",
+            "HTTPS"
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 3",
+          "description": "What is a main characteristic of POP3 when retrieving emails?",
+           "code": null,
+           "options": [
+            "It leaves emails on the server.",
+            "It downloads emails and often removes them from the server.",
+            "It's only used for sending emails.",
+            "It can be used on any device."
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 4",
+          "description": "Which port is commonly used by SMTP?",
+          "code": null,
+          "options": [
+            "Port 80",
+            "Port 443",
+            "Port 25",
+            "Port 110"
+          ],
+          "answer": "3"
+        },
+       {
+           "title": "Question 5",
+           "description": "Which protocol is typically used to send email FROM your email client to the server?",
+           "code": null,
+           "options": [
+               "HTTP",
+               "POP3",
+               "SMTP",
+               "DNS"
+           ],
+           "answer": "3"
+       }
+      ]
+    },
+    {
+      "type": "Lesson",
+       "title": "IMAP (Internet Message Access Protocol)",
+      "description": "Retrieves email from a mail server, leaving it on the server by default.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Retrieving email.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Accessing emails from multiple devices.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: More flexible for multiple device access.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "FTP (File Transfer Protocol)",
+      "description": "Transfers files between client and server.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Transferring files.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: File uploads and downloads.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: Insecure (plaintext). Use SFTP or FTPS.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+             "type": "Test",
+             "title": "IMAP/FTP Quiz",
+             "description": "Test your knowledge of IMAP and FTP",
+             "code": null,
+             "blocks": [
+                 {
+                     "title": "Question 1",
+                     "description": "Which protocol is designed to keep emails on the server, allowing access from multiple devices?",
+                     "code": null,
+                     "options": [
+                         "POP3",
+                         "IMAP",
+                         "SMTP",
+                         "FTP"
+                     ],
+                     "answer": "2"
+                 },
+                 {
+                     "title": "Question 2",
+                     "description": "Which protocol is primarily used for transferring files?",
+                     "code": null,
+                     "options": [
+                         "POP3",
+                         "IMAP",
+                         "SMTP",
+                         "FTP"
+                     ],
+                     "answer": "4"
+                 },
+                 {
+                     "title": "Question 3",
+                     "description": "What is a major security concern with FTP?",
+                     "code": null,
+                     "options": [
+                         "It's too slow.",
+                         "It uses encryption.",
+                         "It transfers data in plaintext.",
+                         "It is not compatible with modern systems."
+                     ],
+                     "answer": "3"
+                 },
+                 {
+                     "title": "Question 4",
+                     "description": "When using IMAP, where are emails typically stored after they are read?",
+                     "code": null,
+                     "options": [
+                         "On the client only",
+                         "On the server only",
+                         "On both the client and server",
+                         "Nowhere, they are deleted."
+                     ],
+                     "answer": "2"
+                 },
+                 {
+                     "title": "Question 5",
+                     "description": "Which of the following is usually the preferred alternative to unsecured FTP for file transfers?",
+                     "code": null,
+                     "options": [
+                         "HTTP",
+                         "Telnet",
+                         "SFTP",
+                         "IMAP"
+                     ],
+                     "answer": "3"
+                 }
+             ]
+         },
+    {
+      "type": "Lesson",
+      "title": "SFTP (SSH File Transfer Protocol)",
+      "description": "Secure version of FTP using SSH.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Secure file transfer.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Secure file uploads and downloads.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: More secure than FTP; requires an SSH server.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "FTPS (FTP Secure)",
+      "description": "Secure version of FTP using SSL/TLS.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Secure file transfer.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Secure file uploads and downloads.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: More secure than FTP; requires SSL/TLS certificates.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+         "type": "Test",
+         "title": "SFTP/FTPS Quiz",
+         "description": "Test your knowledge of SFTP and FTPS.",
+         "code": null,
+         "blocks": [
+             {
+                 "title": "Question 1",
+                 "description": "What is the primary difference between FTP and SFTP?",
+                 "code": null,
+                 "options": [
+                     "SFTP is faster than FTP.",
+                     "SFTP is more secure as it uses SSH for encryption.",
+                     "FTP is used for email, and SFTP is used for file transfers.",
+                     "FTP is newer than SFTP."
+                 ],
+                 "answer": "2"
+             },
+             {
+                 "title": "Question 2",
+                 "description": "Which protocol secures FTP using SSL/TLS?",
+                 "code": null,
+                 "options": [
+                     "SFTP",
+                     "FTPS",
+                     "HTTP",
+                     "SSH"
+                 ],
+                 "answer": "2"
+             },
+             {
+                 "title": "Question 3",
+                 "description": "What is required for FTPS to function?",
+                 "code": null,
+                 "options": [
+                     "A fast internet connection",
+                     "Usernames and passwords",
+                     "SSL/TLS certificates.",
+                     "A specific operating system."
+                 ],
+                 "answer": "3"
+             },
+             {
+                 "title": "Question 4",
+                 "description": "Which encryption protocol does SFTP use?",
+                 "code": null,
+                 "options": [
+                     "SSL",
+                     "TLS",
+                     "SSH",
+                     "DES"
+                 ],
+                 "answer": "3"
+             },
+             {
+                 "title": "Question 5",
+                 "description": "Which of these is the most secure file transfer option?",
+                 "code": null,
+                 "options": [
+                     "FTP",
+                     "FTPS",
+                     "Telnet",
+                     "HTTP"
+                 ],
+                 "answer": "2"
+             }
+         ]
+     },
+    {
+      "type": "Lesson",
+      "title": "SSH (Secure Shell)",
+      "description": "Secure remote access and device management.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Secure remote access.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Secure remote access and server administration.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: Uses encryption; essential for remote server management.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Telnet",
+      "description": "Older protocol for remote terminal access. Insecure.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Remote terminal access.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Remote access.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: Unsecured (plaintext); use SSH instead.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+        "type": "Test",
+        "title": "SSH/Telnet Quiz",
+        "description": "Test your knowledge of SSH and Telnet.",
+        "code": null,
+        "blocks": [
+            {
+                "title": "Question 1",
+                "description": "Which protocol is considered the secure alternative to Telnet?",
+                "code": null,
+                "options": [
+                    "HTTP",
+                    "FTP",
+                    "SSH",
+                    "SMTP"
+                ],
+                "answer": "3"
+            },
+            {
+                "title": "Question 2",
+                "description": "What is a significant security risk when using Telnet?",
+                "code": null,
+                "options": [
+                    "It's too slow.",
+                    "It uses encryption.",
+                    "It transmits data in plaintext.",
+                    "It's not compatible with modern systems."
+                ],
+                "answer": "3"
+            },
+            {
+                "title": "Question 3",
+                "description": "What is the primary function of SSH?",
+                "code": null,
+                "options": [
+                    "Transferring files",
+                    "Secure remote access",
+                    "Sending emails",
+                    "Browsing the web"
+                ],
+                "answer": "2"
+            },
+            {
+                "title": "Question 4",
+                "description": "When would you typically use SSH?",
+                "code": null,
+                "options": [
+                    "For general web browsing",
+                    "To access a remote server's command line",
+                    "To send and receive emails",
+                    "To transfer files using an unsecure connection"
+                ],
+                "answer": "2"
+            },
+            {
+                "title": "Question 5",
+                "description": "Which of these is more secure?",
+                "code": null,
+                "options": [
+                    "Telnet",
+                    "SSH",
+                    "Both provide equal security.",
+                    "Neither is secure."
+                ],
+                "answer": "2"
+            }
+        ]
+    },
+    {
+      "type": "Lesson",
+      "title": "DHCP (Dynamic Host Configuration Protocol)",
+      "description": "Assigns IP addresses and network configuration automatically.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Automatic IP address assignment.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Assigning IP addresses and network settings.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: Simplifies network administration.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "ARP (Address Resolution Protocol)",
+      "description": "Maps IP addresses to MAC addresses.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Maps IP to MAC addresses.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Local network communication.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: Essential for local network communication.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+        "type": "Test",
+        "title": "DHCP/ARP Quiz",
+        "description": "Test your knowledge of DHCP and ARP.",
+        "code": null,
+        "blocks": [
+            {
+                "title": "Question 1",
+                "description": "What is the primary function of DHCP?",
+                "code": null,
+                "options": [
+                    "To translate domain names",
+                    "To automatically assign IP addresses and network settings",
+                    "To encrypt network traffic",
+                    "To transfer files"
+                ],
+                "answer": "2"
+            },
+            {
+                "title": "Question 2",
+                "description": "What does ARP do?",
+                "code": null,
+                "options": [
+                    "Assigns IP addresses.",
+                    "Maps IP addresses to MAC addresses.",
+                    "Translates domain names.",
+                    "Secures network connections."
+                ],
+                "answer": "2"
+            },
+            {
+                "title": "Question 3",
+                "description": "How does DHCP simplify network administration?",
+                "code": null,
+                "options": [
+                    "By requiring manual IP configuration for each device.",
+                    "By automatically configuring network settings.",
+                    "By reducing network speed.",
+                    "By preventing communication between devices."
+                ],
+                "answer": "2"
+            },
+            {
+                "title": "Question 4",
+                "description": "What is a MAC address?",
+                "code": null,
+                "options": [
+                    "A human-readable domain name.",
+                    "A unique hardware identifier for a network interface.",
+                    "An IP address.",
+                    "A port number."
+                ],
+                "answer": "2"
+            },
+            {
+                "title": "Question 5",
+                "description": "In what environment does ARP primarily operate?",
+                "code": null,
+                "options": [
+                    "Across the entire internet.",
+                    "Within a local network (LAN).",
+                    "Between a client and a server.",
+                    "On web servers only."
+                ],
+                "answer": "2"
+            }
+        ]
+    },
+    {
+      "type": "Lesson",
+      "title": "ICMP (Internet Control Message Protocol)",
+      "description": "Used for error reporting and network diagnostics.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Error reporting and diagnostics.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: Ping, traceroute.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: Important for troubleshooting network connectivity.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "IGMP (Internet Group Management Protocol)",
+      "description": "Manages multicast group memberships.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Manages multicast group memberships.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for: IPTV, video conferencing.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations:  Used in applications that stream to multiple recipients.",
+          "blocks": []
+        }
+      ]
+    },
+    {
+        "type": "Test",
+        "title": "ICMP/IGMP Quiz",
+        "description": "Test your knowledge of ICMP and IGMP.",
+        "code": null,
+        "blocks": [
+            {
+                "title": "Question 1",
+                "description": "Which tool uses ICMP to check network connectivity?",
+                "code": null,
+                "options": [
+                    "Ping",
+                    "Traceroute",
+                    "nslookup",
+                    "FTP"
+                ],
+                "answer": "1"
+            },
+            {
+                "title": "Question 2",
+                "description": "What is the primary purpose of ICMP?",
+                "code": null,
+                "options": [
+                    "File transfer",
+                    "Error reporting and diagnostics",
+                    "Sending emails",
+                    "Managing domain names"
+                ],
+                "answer": "2"
+            },
+            {
+                "title": "Question 3",
+                "description": "What does IGMP manage?",
+                "code": null,
+                "options": [
+                    "IP addresses",
+                    "Multicast group memberships",
+                    "Network security",
+                    "File transfers"
+                ],
+                "answer": "2"
+            },
+            {
+                "title": "Question 4",
+                "description": "In what type of application is IGMP most commonly used?",
+                "code": null,
+                "options": [
+                    "Web browsing",
+                    "Emailing",
+                    "IPTV and video conferencing",
+                    "File sharing"
+                ],
+                "answer": "3"
+            },
+            {
+                "title": "Question 5",
+                "description": "What type of data transmission is IGMP associated with?",
+                "code": null,
+                "options": [
+                    "Unicast",
+                    "Broadcast",
+                    "Multicast",
+                    "Anycast"
+                ],
+                "answer": "3"
+            }
+        ]
+    },
+    {
+      "type": "Lesson",
+      "title": "SNMP (Simple Network Management Protocol)",
+      "description": "Used for network device monitoring and management.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "BulletPoint",
+          "text": "Function: Network device monitoring and management.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Used for:  Monitoring network devices.",
+          "blocks": []
+        },
+        {
+          "type": "BulletPoint",
+          "text": "Considerations: Allows administrators to monitor and manage devices.",
+          "blocks": []
+        }
+      ]
+    },
+           {
+        "type": "Lesson",
+        "title": "WebSocket",
+        "description": "Provides full-duplex communication over a single TCP connection.",
+        "code": null,
+        "blocks": [
+          {
+            "type": "BulletPoint",
+            "text": "Function: Real-time, two-way communication.",
+            "blocks": []
+          },
+          {
+            "type": "BulletPoint",
+            "text": "Used for: Chat applications, online games, real-time data updates.",
+            "blocks": []
+          },
+          {
+            "type": "BulletPoint",
+            "text": "Considerations: Enables real-time, low-latency communication.",
+            "blocks": []
+          }
+        ]
+      },
+      {
+            "type": "Test",
+            "title": "SNMP/WebSocket Quiz",
+            "description": "Test your knowledge of SNMP and WebSocket.",
+            "code": null,
+            "blocks": [
+                {
+                    "title": "Question 1",
+                    "description": "What is the primary function of SNMP?",
+                    "code": null,
+                    "options": [
+                        "File Transfer",
+                        "Network device monitoring and management",
+                        "Email Sending",
+                        "Web browsing"
+                    ],
+                    "answer": "2"
+                },
+                {
+                    "title": "Question 2",
+                    "description": "Which protocol is designed for real-time, two-way communication?",
+                    "code": null,
+                    "options": [
+                        "SMTP",
+                        "SNMP",
+                        "WebSocket",
+                        "FTP"
+                    ],
+                    "answer": "3"
+                },
+                {
+                    "title": "Question 3",
+                    "description": "What are some common uses for WebSockets?",
+                    "code": null,
+                    "options": [
+                        "Sending emails",
+                        "Monitoring network devices",
+                        "Chat applications, online games, and real-time updates",
+                        "Downloading files"
+                    ],
+                    "answer": "3"
+                }
+            ]
+        }
+    ]
+}
