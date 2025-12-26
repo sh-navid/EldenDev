@@ -1,0 +1,615 @@
+{
+  "title": "C# Programming Language",
+  "description": "A comprehensive guide to C# fundamentals.",
+  "code": "// This is an example C# code.",
+  "result": null,
+  "resultType": null,
+  "blocks": [
+    {
+      "type": "Lesson",
+      "title": "Basics",
+      "description": "C# is a modern, object-oriented programming language developed by Microsoft. It's used to build a wide variety of applications that run on the .NET platform.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks": []
+    },
+    {
+      "type": "Test",
+      "title": "Basics - Quiz",
+      "description": "Test your knowledge of C# basics.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "Who developed C#?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options": [
+            "Sun Microsystems",
+            "Microsoft",
+            "Oracle",
+            "Google"
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 2",
+          "description": "Which platform does C# primarily run on?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options": [
+            ".NET",
+            "Java Virtual Machine",
+            "Python Virtual Environment",
+            "Node.js"
+          ],
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Write to output",
+      "description": "C# provides several ways to output data. The most common is using the console for simple text and the UI elements for displaying on the screen.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Console.WriteLine",
+          "description": "Outputs messages to the console. Useful for debugging and simple output.",
+          "code": "Console.WriteLine(\"Hello, C#!\");",
+          "result": "Hello, C#!",
+          "resultType": "simulated",
+          "blocks": []
+        },
+         {
+          "type": "Lesson",
+          "title": "Output to UI component",
+          "description": "Outputs to UI component to be displayed on the screen. (Depends on the UI framework, e.g., WinForms, WPF, ASP.NET)",
+          "code": "//This is an example, it depends on the framework like WinForms, WPF, ASP.NET\n//Label1.Text = \"Hello from UI!\";",
+          "result": null,
+          "resultType": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Write to output - Quiz",
+      "description": "Test your knowledge about output methods in C#.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "Which method is primarily used for displaying output in Console applications?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options": [
+            "Debug.WriteLine()",
+            "Console.Write() or Console.WriteLine()",
+            "MessageBox.Show()",
+            "document.write()"
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Variables",
+      "description": "Variables are used to store data in C#. You declare variables using specific data types (int, string, bool, etc.) and assign values to them.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Variable Declaration",
+          "description": "Declaring variables with data type and initial value.",
+          "code": "int age = 30;\nstring name = \"John\";\nbool isStudent = true;",
+          "result": null,
+          "resultType": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Variables - Quiz",
+      "description": "Test your knowledge of variable declarations.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "Which keyword is used to declare an integer variable?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options": [
+            "str",
+            "int",
+            "num",
+            "integer"
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 2",
+          "description": "Which keyword is used to declare a string variable?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options": [
+            "str",
+            "string",
+            "char",
+            "text"
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Constants",
+      "description": "Constants are variables whose values cannot be changed after declaration. Use `const` to declare constants.",
+      "code": "const double PI = 3.14159;",
+      "result": null,
+      "resultType": null,
+      "blocks": []
+    },
+    {
+      "type": "Test",
+      "title": "Constants - Quiz",
+      "description": "Test your knowledge of constants.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "Which keyword is used to declare a constant in C#?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options": [
+            "var",
+            "let",
+            "const",
+            "readonly"
+          ],
+          "answer": "3"
+        },
+         {
+          "title": "Question 2",
+          "description": "Can you reassign a constant value after it has been initialized?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options": [
+            "Yes",
+            "No",
+            "Only if it's an object",
+             "Only within the same block"
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Comments",
+      "description": "Comments are notes in your code that are ignored by the C# compiler. Use comments to explain your code.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Single-line comment example",
+          "description": "Use `//` to create a single-line comment.",
+          "code": "// This is a single-line comment.",
+          "result": null,
+          "resultType": null,
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Multi-line comment example",
+          "description": "Use `/* ... */` to create a multi-line comment.",
+          "code": "/*\nThis is a multi-line comment.\nIt can span across multiple lines.\n*/",
+          "result": null,
+          "resultType": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Comments - Quiz",
+      "description": "Test your knowledge about the C# comments.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "How do you create a single-line comment in C#?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options":[
+            "// This is a comment",
+            "/* This is a comment */",
+            "' This is a comment",
+            "<!-- This is a comment -->"
+          ],
+          "answer": "1"
+        },
+         {
+          "title": "Question 2",
+          "description": "How do you create a multi-line comment in C#?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options":[
+            "// This is a comment",
+            "/* This is a comment */",
+            "' This is a comment",
+            "<!-- This is a comment -->"
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Methods (Functions)",
+      "description": "Methods are blocks of reusable code. They can take inputs (parameters) and return outputs. Use the `void` keyword when the method doesn't return anything.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Method Declaration Example",
+          "description": "Shows a basic function declaration.",
+          "code": "public int Add(int a, int b) {\n  return a + b;\n}\n\nint sum = Add(5, 3); // sum is 8",
+          "result": null,
+          "resultType": null,
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Method with no return",
+          "description": "Functions don't have to return a value, they can perform actions.",
+          "code": "public void LogMessage(string message) {\n  Console.WriteLine(message);\n}\n\nLogMessage(\"This is a log message.\");",
+          "result": null,
+          "resultType": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Methods (Functions) - Quiz",
+      "description": "Test your knowledge about the C# methods.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "Which keyword is used to declare a method in C#?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options":[
+            "def",
+            "func",
+            "method",
+            "void"
+          ],
+          "answer": "3"
+        },
+        {
+          "title": "Question 3",
+          "description": "Do methods always have to return a value?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options":[
+            "Yes",
+            "No",
+            "Only arrow functions need to return values.",
+            "Only methods declared with a return type must return a vaule."
+          ],
+          "answer": "4"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Data Types",
+      "description": "C# has several built-in data types. Understanding these is fundamental to working with C#.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "string",
+          "description": "Represents text.",
+          "code": "string myString = \"Hello, world!\";",
+          "result": null,
+          "resultType": null,
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "int",
+          "description": "Represents whole numbers.",
+          "code": "int myNumber = 10;",
+          "result": null,
+          "resultType": null,
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "double",
+          "description": "Represents floating-point (decimal) numbers.",
+          "code": "double myFloat = 3.14;",
+          "result": null,
+          "resultType": null,
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "bool",
+          "description": "Represents a logical value that can be true or false.",
+          "code": "bool isTrue = true;",
+          "result": null,
+          "resultType": null,
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "char",
+          "description": "Represents a single character.",
+          "code": "char myChar = 'A';",
+          "result": null,
+          "resultType": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Data Types - Quiz",
+      "description": "Test your knowledge on C# data types.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "Which data type is used to represent text?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options":[
+            "int",
+            "bool",
+            "string",
+            "char"
+          ],
+          "answer": "3"
+        },
+        {
+          "title": "Question 2",
+          "description": "Which data type is used to represent whole numbers?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options":[
+            "int",
+            "float",
+            "string",
+            "char"
+          ],
+          "answer": "1"
+        },
+        {
+          "title": "Question 3",
+          "description": "Which data type is used to represent a single character?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options":[
+            "int",
+            "float",
+            "string",
+            "char"
+          ],
+          "answer": "4"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Variable Scope",
+      "description": "Understanding variable scope is crucial to avoid unexpected behavior. Scope refers to where a variable is accessible within your code.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Local Scope Example",
+          "description": "Variables declared inside of any function have local scope.",
+          "code": "public void MyMethod()\n{\n    int localVar = 10;\n    Console.WriteLine(localVar); // Accessible within the method\n}",
+          "result": null,
+          "resultType": null,
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Class Scope Example",
+          "description": "Variables declared inside of class have class scope, accessible to all members.",
+          "code": "public class MyClass\n{\n    private int classVar = 20;\n\n    public void PrintClassVar()\n    {\n        Console.WriteLine(classVar); // Accessible within the class\n    }\n}",
+          "result": null,
+          "resultType": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Variable Scope - Quiz",
+      "description": "Test your understanding of C# variable scope.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "What is the scope of a variable declared inside a method?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options":[
+            "Class scope",
+            "Block scope",
+            "Global scope",
+            "Local scope"
+          ],
+          "answer": "4"
+        },
+        {
+          "title": "Question 2",
+          "description": "What is the scope of a variable declared inside a class",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options":[
+            "Class scope",
+            "Block scope",
+            "Global scope",
+            "Local scope"
+          ],
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Operators",
+      "description": "C# provides various operators to perform operations on values.",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Arithmetic Operators Example",
+          "description": "Examples for each operator to show the functionalities.",
+          "code": "int addition = 10 + 2; // 12\nint subtraction = 10 - 2; // 8\nint multiplication = 10 * 2; // 20\nint division = 10 / 2; // 5\nint modulus = 10 % 3;   // 1\nConsole.WriteLine(addition + \" \" + subtraction + \" \" + multiplication + \" \" + division + \" \" + modulus);",
+          "result": "12 8 20 5 1",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Assignment Operators Example",
+          "description": "Shows different ways to assign values to variables.",
+          "code": "int a = 10; \na += 5;   // a = a + 5;   a is now 15\na -= 3;   // a = a - 3;   a is now 12\na *= 2;   // a = a * 2;   a is now 24\na /= 4;   // a = a / 4;   a is now 6\na %= 5;   // a = a % 5;   a is now 1\nConsole.WriteLine(a); // Output: 1",
+          "result": "1",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Comparison Operators Example",
+          "description": "Examples to compare the variables values",
+          "code": "int x = 5;\nint y = 5;\n\nConsole.WriteLine(x == y);  // true (equality)\nConsole.WriteLine(x != y);  // false (inequality)\nConsole.WriteLine(x > 3);   // true\nConsole.WriteLine(x < 10);  // true\nConsole.WriteLine(x >= 5);  // true\nConsole.WriteLine(x <= 5);  // true",
+          "result": "true\nfalse\ntrue\ntrue\ntrue\ntrue",
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Logical Operators Example",
+          "description": "Demonstrates the use of logical operators",
+          "code": "bool p = true;\nbool q = false;\n\nConsole.WriteLine(p && q); // false (AND)\nConsole.WriteLine(p || q); // true (OR)\nConsole.WriteLine(!p);   // false (NOT)\nConsole.WriteLine(!q);   // true (NOT)",
+          "result": "false\ntrue\nfalse\ntrue",
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Operators - Quiz",
+      "description": "Test your knowledge on C# operators",
+      "code": null,
+      "result": null,
+      "resultType": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "What operator is used for equality in JavaScript?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options":[
+            "==",
+            "===",
+            "!=",
+            "!=="
+          ],
+          "answer": "1"
+        },
+         {
+          "title": "Question 2",
+          "description": "What is the result of `true && false`?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options":[
+           "true",
+            "false",
+            "NaN",
+            "undefined"
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 3",
+          "description": "What does the modulus operator (%) do?",
+          "code": null,
+          "result": null,
+          "resultType": null,
+          "options":[
+            "Adds two numbers",
+            "Subtracts two numbers",
+            "Returns the remainder of a division",
+            "Multiplies two numbers."
+          ],
+          "answer": "3"
+        }
+      ]
+    }
+  ]
+}
