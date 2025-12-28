@@ -11,7 +11,8 @@
                     {
                         "level": 1,
                         "title": "Basic",
-                        "url": "Software/Languages/Javascript1.json"
+                        "url": "Software/Languages/Javascript1.json",
+                        "description": "Introduction to JavaScript syntax, data types, and control flow."
                     }
                 ]
             },
@@ -23,7 +24,8 @@
                     {
                         "level": 1,
                         "title": "Basic",
-                        "url": "Software/Languages/CSharp1.json"
+                        "url": "Software/Languages/CSharp1.json",
+                        "description": "Introduction to C# syntax, data types, and object-oriented programming."
                     }
                 ]
             }
@@ -41,12 +43,14 @@
                     {
                         "level": 1,
                         "title": "Basic",
-                        "url": "Network/Protocols/NetworkProtocols1.json"
+                        "url": "Network/Protocols/NetworkProtocols1.json",
+                        "description": "Introduction to TCP/IP, UDP, and common network protocols."
                     },
                     {
                         "level": 2,
                         "title": "Intermediate",
-                        "url": "Network/Protocols/NetworkProtocols2.json"
+                        "url": "Network/Protocols/NetworkProtocols2.json",
+                        "description": "Advanced topics in network protocols, including routing and security."
                     }
                 ]
             }
@@ -54,7 +58,7 @@
     },
     {
         "category": "Software/Develop/Frontend/Stack/React",
-        "description": "",
+        "description": "Frontend development with React.js and related technologies.",
         "courses": [
             {
                 "id": 100,
@@ -64,123 +68,136 @@
                     {
                         "level": 1,
                         "title": "Basic",
-                        "url": "Software/Languages/Javascript/Javascript1.json"
+                        "url": "Software/Languages/Javascript/Javascript1.json",
+                        "description": "Introduction to JavaScript syntax, data types, DOM manipulation, and event handling."
                     }
                 ]
             },
             {
                 "id": 105,
                 "title": "TypeScript",
-                "description": "?",
+                "description": "Learn TypeScript, a superset of JavaScript that adds static typing.",
                 "levels": [
                     {
                         "level": 1,
                         "title": "Basic",
-                        "url": "Software/Languages/Typescript/Typescript1.json"
+                        "url": "Software/Languages/Typescript/Typescript1.json",
+                        "description": "Introduction to TypeScript syntax, types, interfaces, and classes."
                     }
                 ]
             },
             {
                 "id": 110,
                 "title": "JavaScript ES5 vs ES6",
-                "description": "?",
+                "description": "Understand the differences between ES5 and ES6 (and later) JavaScript.",
                 "levels": [
                     {
                         "level": 1,
                         "title": "Basic",
-                        "url": "Software/Languages/Javascript/Javascript_es5_vs_es6.json"
+                        "url": "Software/Languages/Javascript/Javascript_es5_vs_es6.json",
+                        "description": "Comparing and contrasting important features introduced in ES6 and later versions of JavaScript."
                     }
                 ]
             },
             {
                 "id": 115,
                 "title": "React.Js",
-                "description": "?",
+                "description": "Build dynamic user interfaces with React.js.",
                 "levels": [
                     {
                         "level": 1,
                         "title": "Basic",
-                        "url": "Software/Libs/React/ReactJs_Basics.json"
+                        "url": "Software/Libs/React/ReactJs_Basics.json",
+                        "description": "Introduction to React components, JSX, and state management."
                     },
                     {
                         "level": 2,
                         "title": "Hooks",
-                        "url": "Software/Libs/React/ReactJs_Hooks.json"
+                        "url": "Software/Libs/React/ReactJs_Hooks.json",
+                        "description": "Using React Hooks for stateful logic and side effects."
                     },
                     {
                         "level": 3,
                         "title": "StyledComponents",
-                        "url": "Software/Libs/React/ReactJs_StyledComponents.json"
+                        "url": "Software/Libs/React/ReactJs_StyledComponents.json",
+                        "description": "Styling React components using Styled Components."
                     },
                     {
                         "level": 4,
                         "title": "JSX",
-                        "url": "Software/Libs/React/ReactJs_JSX.json"
+                        "url": "Software/Libs/React/ReactJs_JSX.json",
+                        "description": "Deep dive into JSX syntax and its usage in React components."
                     },
                     {
                         "level": 5,
                         "title": "Tailwind",
-                        "url": "Software/Frameworks/CSS/Tailwind.json"
+                        "url": "Software/Frameworks/CSS/Tailwind.json",
+                        "description": "Styling React components using Tailwind CSS."
                     },
                     {
                         "level": 6,
                         "title": "AntD",
-                        "url": "Software/Libs/UI/AntD.json"
+                        "url": "Software/Libs/UI/AntD.json",
+                        "description": "Utilizing Ant Design React UI library for component-based development."
                     },
                     {
                         "level": 7,
                         "title": "Redux",
-                        "url": "Software/Libs/React/ReactJs_Redux.json"
+                        "url": "Software/Libs/React/ReactJs_Redux.json",
+                        "description": "Managing application state with Redux."
                     },
                     {
                         "level": 8,
                         "title": "Redux Saga",
-                        "url": "Software/Libs/React/ReactJs_Redux_Saga.json"
+                        "url": "Software/Libs/React/ReactJs_Redux_Saga.json",
+                        "description": "Handling side effects with Redux Saga."
                     },
                     {
                         "level": 9,
                         "title": "TanStack Query (React Query)",
-                        "url": "Software/Libs/React/ReactJs_Redux_Saga.json"
+                        "url": "Software/Libs/React/ReactJs_Redux_Saga.json",
+                        "description": "Data fetching and state management with TanStack Query (React Query)."
                     }
                 ]
             },
             {
                 "id": 120,
                 "title": "Next.Js",
-                "description": "?",
+                "description": "Build server-side rendered React applications with Next.js.",
                 "levels": [
                     {
                         "level": 1,
                         "title": "Basic",
-                        "url": "Software/frameworks/NextJs1.json"
+                        "url": "Software/frameworks/NextJs1.json",
+                        "description": "Introduction to Next.js, including routing and server-side rendering."
                     }
                 ]
             }
         ]
     },
     {
-        "category": "Software/Develop/BackEnd",
-        "description": "",
+        "category": "Software/Develop/BackEnd/Stack/DotNet",
+        "description": "Backend development with .NET.",
         "courses": []
     },
     {
         "category": "Software/Develop/FullStack",
-        "description": "",
+        "description": "Full-stack web development.",
         "courses": []
     },
     {
         "category": "Software/Develop/VibeCoding",
-        "description": "",
+        "description": "Vibe coding.",
         "courses": []
     },
     {
         "category": "Concepts",
-        "description": "",
+        "description": "Explore fundamental concepts in computer science.",
         "courses": []
     },
     {
         "category": "AI",
-        "description": "",
+        "description": "Artificial Intelligence.",
         "courses": []
     }
 ]
