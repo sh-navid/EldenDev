@@ -1,55 +1,186 @@
 [
-  {
-    "category": "Programming Languages",
-    "description": "Explore the world of programming languages and their practical applications.",
-    "courses": [
-      {
-        "id": 1,
-        "title": "JavaScript",
-        "description": "Master the fundamentals of JavaScript, a versatile language for web development.",
-        "levels": [
-          {
-            "level": 1,
-            "title": "Basic",
-            "url": "Software/Languages/Javascript1.json"
-          }
+    {
+        "category": "Software/Programming/Languages",
+        "description": "Explore the world of programming languages and their practical applications.",
+        "courses": [
+            {
+                "id": 1,
+                "title": "JavaScript",
+                "description": "Master the fundamentals of JavaScript, a versatile language for web development.",
+                "levels": [
+                    {
+                        "level": 1,
+                        "title": "Basic",
+                        "url": "Software/Languages/Javascript1.json"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "CSharp",
+                "description": "Learn C# and build robust applications with this powerful language.",
+                "levels": [
+                    {
+                        "level": 1,
+                        "title": "Basic",
+                        "url": "Software/Languages/CSharp1.json"
+                    }
+                ]
+            }
         ]
-      },
-      {
-        "id": 2,
-        "title": "CSharp",
-        "description": "Learn C# and build robust applications with this powerful language.",
-        "levels": [
-          {
-            "level": 1,
-            "title": "Basic",
-            "url": "Software/Languages/CSharp1.json"
-          }
+    },
+    {
+        "category": "Network",
+        "description": "Understand the concepts and technologies that form the foundation of modern networks.",
+        "courses": [
+            {
+                "id": 1,
+                "title": "Network Protocols",
+                "description": "Dive deep into network protocols and their role in data communication.",
+                "levels": [
+                    {
+                        "level": 1,
+                        "title": "Basic",
+                        "url": "Network/Protocols/NetworkProtocols1.json"
+                    },
+                    {
+                        "level": 2,
+                        "title": "Intermediate",
+                        "url": "Network/Protocols/NetworkProtocols2.json"
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  },
-  {
-    "category": "Network",
-    "description": "Understand the concepts and technologies that form the foundation of modern networks.",
-    "courses": [
-      {
-        "id": 1,
-        "title": "Network Protocols",
-        "description": "Dive deep into network protocols and their role in data communication.",
-        "levels": [
-          {
-            "level": 1,
-            "title": "Basic",
-            "url": "Network/Protocols/NetworkProtocols1.json"
-          },
-          {
-            "level": 2,
-            "title": "Intermediate",
-            "url": "Network/Protocols/NetworkProtocols2.json"
-          }
+    },
+    {
+        "category": "Software/Develop/Frontend/Stack/React",
+        "description": "",
+        "courses": [
+            {
+                "id": 100,
+                "title": "JavaScript",
+                "description": "Master the fundamentals of JavaScript, a versatile language for web development.",
+                "levels": [
+                    {
+                        "level": 1,
+                        "title": "Basic",
+                        "url": "Software/Languages/Javascript/Javascript1.json"
+                    }
+                ]
+            },
+            {
+                "id": 105,
+                "title": "TypeScript",
+                "description": "?",
+                "levels": [
+                    {
+                        "level": 1,
+                        "title": "Basic",
+                        "url": "Software/Languages/Typescript/Typescript1.json"
+                    }
+                ]
+            },
+            {
+                "id": 110,
+                "title": "JavaScript ES5 vs ES6",
+                "description": "?",
+                "levels": [
+                    {
+                        "level": 1,
+                        "title": "Basic",
+                        "url": "Software/Languages/Javascript/Javascript_es5_vs_es6.json"
+                    }
+                ]
+            },
+            {
+                "id": 115,
+                "title": "React.Js",
+                "description": "?",
+                "levels": [
+                    {
+                        "level": 1,
+                        "title": "Basic",
+                        "url": "Software/Libs/React/ReactJs1.json"
+                    },
+                    {
+                        "level": 2,
+                        "title": "Hooks",
+                        "url": "Software/Libs/React/ReactJs_Hooks.json"
+                    },
+                    {
+                        "level": 3,
+                        "title": "StyledComponents",
+                        "url": "Software/Libs/React/ReactJs_StyledComponents.json"
+                    },
+                    {
+                        "level": 4,
+                        "title": "JSX",
+                        "url": "Software/Libs/React/ReactJs_JSX.json"
+                    },
+                    {
+                        "level": 5,
+                        "title": "Tailwind",
+                        "url": "Software/Frameworks/CSS/Tailwind.json"
+                    },
+                    {
+                        "level": 6,
+                        "title": "AntD",
+                        "url": "Software/Libs/UI/AntD.json"
+                    },
+                    {
+                        "level": 7,
+                        "title": "Redux",
+                        "url": "Software/Libs/React/ReactJs_Redux.json"
+                    },
+                    {
+                        "level": 8,
+                        "title": "Redux Saga",
+                        "url": "Software/Libs/React/ReactJs_Redux_Saga.json"
+                    },
+                    {
+                        "level": 9,
+                        "title": "TanStack Query (React Query)",
+                        "url": "Software/Libs/React/ReactJs_Redux_Saga.json"
+                    }
+                ]
+            },
+            {
+                "id": 120,
+                "title": "Next.Js",
+                "description": "?",
+                "levels": [
+                    {
+                        "level": 1,
+                        "title": "Basic",
+                        "url": "Software/frameworks/NextJs1.json"
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  }
+    },
+    {
+        "category": "Software/Develop/BackEnd",
+        "description": "",
+        "courses": []
+    },
+    {
+        "category": "Software/Develop/FullStack",
+        "description": "",
+        "courses": []
+    },
+    {
+        "category": "Software/Develop/VibeCoding",
+        "description": "",
+        "courses": []
+    },
+    {
+        "category": "Concepts",
+        "description": "",
+        "courses": []
+    },
+    {
+        "category": "AI",
+        "description": "",
+        "courses": []
+    }
 ]
