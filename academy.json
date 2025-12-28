@@ -4,15 +4,20 @@
         "description": "Explore the world of programming languages and their practical applications.",
         "courses": [
             {
-                "id": 1,
-                "title": "JavaScript",
-                "description": "Master the fundamentals of JavaScript, a versatile language for web development.",
+                "id": 105,
+                "title": "TypeScript",
+                "description": "Learn TypeScript, a superset of JavaScript that adds static typing.",
                 "levels": [
                     {
                         "level": 1,
                         "title": "Basic",
-                        "url": "Software/Languages/Javascript1.json",
-                        "description": "Introduction to JavaScript syntax, data types, and control flow."
+                        "url": "Software/Languages/Typescript/Typescript1.json",
+                        "description": "Introduction to TypeScript syntax, types, interfaces, and classes."
+                    }, {
+                        "level": 1,
+                        "title": "JavaScript ES5 vs ES6",
+                        "url": "Software/Languages/Javascript/Javascript_es5_vs_es6.json",
+                        "description": "Understand the differences between ES5 and ES6 (and later) JavaScript."
                     }
                 ]
             },
@@ -83,19 +88,11 @@
                         "title": "Basic",
                         "url": "Software/Languages/Typescript/Typescript1.json",
                         "description": "Introduction to TypeScript syntax, types, interfaces, and classes."
-                    }
-                ]
-            },
-            {
-                "id": 110,
-                "title": "JavaScript ES5 vs ES6",
-                "description": "Understand the differences between ES5 and ES6 (and later) JavaScript.",
-                "levels": [
-                    {
+                    }, {
                         "level": 1,
-                        "title": "Basic",
+                        "title": "JavaScript ES5 vs ES6",
                         "url": "Software/Languages/Javascript/Javascript_es5_vs_es6.json",
-                        "description": "Comparing and contrasting important features introduced in ES6 and later versions of JavaScript."
+                        "description": "Understand the differences between ES5 and ES6 (and later) JavaScript."
                     }
                 ]
             },
