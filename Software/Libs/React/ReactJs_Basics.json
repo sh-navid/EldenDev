@@ -1,0 +1,367 @@
+{
+  "title": "React.js Basics",
+  "description": "A foundational guide to React.js, covering components, JSX, and basic state management.",
+  "code": "// This is an example React.js code.",
+  "blocks": [
+    {
+      "type": "Lesson",
+      "title": "Introduction to React",
+      "description": "React is a JavaScript library for building user interfaces. It's component-based, declarative, and efficient for creating dynamic web applications.",
+      "code": null,
+      "blocks": []
+    },
+    {
+      "type": "Test",
+      "title": "React Basics - Quiz",
+      "description": "Test your knowledge of React fundamentals.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "What is React?",
+          "code": null,
+          "options": [
+            "A JavaScript framework for server-side development.",
+            "A JavaScript library for building user interfaces.",
+            "A database management system.",
+            "A CSS preprocessor."
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 2",
+          "description": "What is a key characteristic of React applications?",
+          "code": null,
+          "options": [
+            "They are primarily server-side rendered.",
+            "They are component-based.",
+            "They favor imperative programming.",
+            "They don't use JavaScript."
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Components",
+      "description": "Components are the building blocks of React applications. They are reusable, independent pieces of UI.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Functional Component Example",
+          "description": "A simple functional component.",
+          "code": "function Welcome(props) {\n  return <h1>Hello, {props.name}</h1>;\n}",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Class Component Example (older approach, less common now)",
+          "description": "Demonstrates a class component (older style).",
+          "code": "/*\nimport React from 'react';\nclass Hello extends React.Component {\n  render() {\n    return <div>Hello, {this.props.name}</div>;\n  }\n}\n*/",
+           "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Components - Quiz",
+      "description": "Test your knowledge about React components.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "What are components in React?",
+          "code": null,
+          "options": [
+            "Database tables",
+            "Reusable UI elements",
+            "Server-side scripts",
+            "CSS files"
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 2",
+          "description": "Which type of component is more commonly used in modern React?",
+          "code": null,
+          "options": [
+            "Class components",
+            "Functional components",
+            "Abstract components",
+            "Static components"
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "JSX",
+      "description": "JSX is a syntax extension to JavaScript. It allows you to write HTML-like code within your JavaScript.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "JSX Example",
+          "description": "A simple example of JSX.",
+          "code": "const element = <h1>Hello, world!</h1>;\n",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "JSX with Variables",
+          "description": "Using variables within JSX.",
+          "code": "const name = 'Alice';\nconst element = <h1>Hello, {name}</h1>;",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+      {
+      "type": "Test",
+      "title": "JSX - Quiz",
+      "description": "Test your knowledge on the basics of JSX.",
+      "code": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "What is JSX?",
+          "code": null,
+          "options":[
+            "A JavaScript framework",
+            "A syntax extension to JavaScript",
+            "A database query language",
+            "A CSS preprocessor"
+          ],
+          "answer": "2"
+        },
+         {
+          "title": "Question 2",
+          "description": "How do you embed JavaScript expressions within JSX?",
+          "code": null,
+          "options":[
+            "{{ ... }}",
+            "[[ ... ]]",
+            "{ ... }",
+            "$$ ... $$"
+          ],
+          "answer": "3"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Props",
+      "description": "Props (short for properties) are used to pass data from parent components to child components.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Passing Props in functional components",
+          "description": "Example to show how props passed to functional components",
+          "code": "function Welcome(props) {\n  return <h1>Hello, {props.name}</h1>;\n}\n\n// Usage:\n// <Welcome name=\"Alice\" />",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Props Example",
+          "description": "Another props example",
+          "code": "function Greeting(props) {\n  return <p>Hello, {props.name}, you are {props.age} years old.</p>;\n}\n\n// Usage:\n// <Greeting name=\"Bob\" age={30} />",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Props - Quiz",
+      "description": "Test your knowledge about props in reactjs.",
+      "code": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "What are props in React?",
+          "code": null,
+          "options":[
+            "Variables declared within a component.",
+            "Data passed from parent to child components.",
+            "Global variables in React.",
+            "Component CSS styles."
+          ],
+          "answer": "2"
+        },
+         {
+          "title": "Question 2",
+          "description": "How are props passed to a component?",
+          "code": null,
+          "options":[
+            "Using state.",
+            "As attributes in the JSX tag.",
+            "Through global variables.",
+            "By calling a special prop function."
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "State",
+      "description": "State allows components to manage and update their data. This triggers re-renders of the component.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Using State with useState Hook",
+          "description": "Example using the `useState` hook to manage the state.",
+          "code": "import React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n    </div>\n  );\n}",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+       {
+      "type": "Test",
+      "title": "State - Quiz",
+      "description": "Test your knowledge on State in reactjs.",
+      "code": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "What is state in React?",
+          "code": null,
+          "options":[
+            "Data passed from parent to child components.",
+            "A way to manage and update a component's data.",
+            "Global variables in React.",
+            "Component styling."
+          ],
+          "answer": "2"
+        },
+         {
+          "title": "Question 2",
+          "description": "Which React Hook is used to manage state in functional components?",
+          "code": null,
+          "options":[
+            "useState",
+            "useEffect",
+            "useContext",
+            "useReducer"
+          ],
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Event Handling",
+      "description": "React handles events just like HTML elements. You attach event handlers to elements to respond to user interactions.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Event Handling Example",
+          "description": "Adding an event listener to a button.",
+          "code": "function handleClick() {\n  alert('Button clicked!');\n}\n\nfunction MyComponent() {\n  return (\n    <button onClick={handleClick}>Click me</button>\n  );\n}",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+       {
+      "type": "Test",
+      "title": "Event Handling - Quiz",
+      "description": "Test your knowledge on Event Handling in reactjs.",
+      "code": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "How are event handlers attached to elements in React?",
+          "code": null,
+          "options":[
+            "Using the `addEventListener` method.",
+            "As attributes in the JSX tag, prefixed with `on`.",
+            "Through a separate event handling file.",
+            "By default, any click triggers a function."
+          ],
+          "answer": "2"
+        },
+         {
+          "title": "Question 2",
+          "description": "What is the primary purpose of event handling in React?",
+          "code": null,
+          "options":[
+            "To style the components.",
+            "To handle user interactions.",
+            "To define component structure.",
+            "To manage data flow."
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+        {
+      "type": "Lesson",
+      "title": "Lists and Keys",
+      "description": "When rendering lists of elements, React requires a unique 'key' prop to help identify which items have changed, been added, or been removed.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Example : Rendering a list",
+          "description": "Adding a event listener to a button.",
+           "code": "function NumberList(props) {\n  const numbers = props.numbers;\n  const listItems = numbers.map((number) =>\n    <li key={number.toString()}>\n      {number}\n    </li>\n  );\n  return (\n    <ul>{listItems}</ul>\n  );\n}\n\nconst numbers = [1, 2, 3, 4, 5];\n// const root = ReactDOM.createRoot(document.getElementById('root'));\n// root.render(<NumberList numbers={numbers} />);",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Lists and Keys - Quiz",
+      "description": "Test your knowledge on Lists and Keys in reactjs.",
+      "code": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "Why are keys important when rendering lists of elements in React?",
+          "code": null,
+           "options":[
+            "To style the list items.",
+            "To uniquely identify each item in the list.",
+            "To control the order of the list items.",
+            "To animate list items."
+          ],
+          "answer": "2"
+        },
+         {
+          "title": "Question 2",
+          "description": "What is the recommended approach for defining keys?",
+          "code": null,
+          "options":[
+            "Using the index of the item in the array.",
+            "Using a unique ID associated with the item.",
+             "Using a random number.",
+             "Keys are not needed."
+          ],
+          "answer": "2"
+        }
+      ]
+    }
+  ]
+}
