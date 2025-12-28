@@ -10,7 +10,7 @@
                 "levels": [
                     {
                         "level": 1,
-                        "title": "Basic",
+                        "title": "Basics",
                         "url": "Software/Languages/Javascript/Javascript1.json",
                         "description": "Introduction to JavaScript syntax, data types, DOM manipulation, and event handling."
                     },
@@ -29,8 +29,8 @@
                 "levels": [
                     {
                         "level": 1,
-                        "title": "Basic",
-                        "url": "Software/Languages/CSharp1.json",
+                        "title": "Basics",
+                        "url": "Software/Languages/CSharp/CSharp1.json",
                         "description": "Introduction to C# syntax, data types, and object-oriented programming."
                     }
                 ]
@@ -48,7 +48,7 @@
                 "levels": [
                     {
                         "level": 1,
-                        "title": "Basic",
+                        "title": "Basics",
                         "url": "Network/Protocols/NetworkProtocols1.json",
                         "description": "Introduction to TCP/IP, UDP, and common network protocols."
                     },
@@ -73,7 +73,7 @@
                 "levels": [
                     {
                         "level": 1,
-                        "title": "Basic",
+                        "title": "Basics",
                         "url": "Software/Languages/Javascript/Javascript1.json",
                         "description": "Introduction to JavaScript syntax, data types, DOM manipulation, and event handling."
                     },
@@ -92,7 +92,7 @@
                 "levels": [
                     {
                         "level": 1,
-                        "title": "Basic",
+                        "title": "Basics",
                         "url": "Software/Languages/Typescript/Typescript1.json",
                         "description": "Introduction to TypeScript syntax, types, interfaces, and classes."
                     }
@@ -105,7 +105,7 @@
                 "levels": [
                     {
                         "level": 1,
-                        "title": "Basic",
+                        "title": "Basics",
                         "url": "Software/Libs/React/ReactJs_Basics.json",
                         "description": "Introduction to React components, JSX, and state management."
                     },
@@ -166,7 +166,7 @@
                 "levels": [
                     {
                         "level": 1,
-                        "title": "Basic",
+                        "title": "Basics",
                         "url": "Software/frameworks/NextJs1.json",
                         "description": "Introduction to Next.js, including routing and server-side rendering."
                     }
@@ -189,10 +189,24 @@
         "description": "Vibe coding.",
         "courses": []
     },
-    {
+     {
         "category": "Concepts",
-        "description": "Explore fundamental concepts in computer science.",
-        "courses": []
+        "description": "Fundamental Software Engineering concepts.",
+        "courses": [
+            {
+                "id": 1,
+                "title": "DDD",
+                "description": "Learn the principles of Domain-Driven Design.",
+                "levels": [
+                    {
+                        "level": 1,
+                        "title": "Basics",
+                        "url": "Software/Concepts/DDD.json",
+                        "description": "Introduction to DDD, including core concepts and terminology."
+                    }
+                ]
+            }
+        ]
     },
     {
         "category": "AI",

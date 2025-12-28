@@ -1,0 +1,461 @@
+{
+  "title": "Domain-Driven Design (DDD)",
+  "description": "A software design approach focused on modeling software to match a domain according to input from that domain's experts.",
+  "code": null,
+  "blocks": [
+    {
+      "type": "Lesson",
+      "title": "What is Domain-Driven Design?",
+      "description": "Domain-Driven Design (DDD) is a software design approach that centers the development on a model of the core business domain. The goal is to create software that accurately reflects the business domain and is easily understood by both developers and domain experts. It emphasizes the importance of a ubiquitous language.",
+      "code": null,
+      "blocks": []
+    },
+    {
+      "type": "Lesson",
+      "title": "Key Concepts of DDD",
+      "description": "Understanding core DDD concepts is vital for implementing it effectively.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Ubiquitous Language",
+          "description": "A common language developed by the team (developers and domain experts) to describe the domain. This language should be consistently used in code, documentation, and communication.",
+          "code": "// Example: Instead of using 'customer_id', use 'customerId'\n// consistently throughout code and communication.",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Entities",
+          "description": "Objects defined by their identity rather than their attributes. Their identity persists over time and across state changes. They have a lifecycle.",
+          "code": "// Example: A 'Customer' entity. Even if the customer's address changes, it's still the same customer.",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Value Objects",
+          "description": "Objects defined by their attributes, not their identity. They are immutable.  If any attribute changes, a new value object is created.",
+          "code": "// Example: An 'Address' value object. If any part of the address changes, a new 'Address' object is created.",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Aggregates",
+          "description": "Clusters of entities and value objects, treated as a single unit. An aggregate has a root entity, which guarantees the consistency of changes within the aggregate.  Only the root entity can be accessed directly from outside the aggregate.",
+          "code": "// Example: An 'Order' aggregate with 'Order' as the root entity, and 'OrderItem' as part of the aggregate.",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Repositories",
+          "description": "Provide a way to access aggregate roots. Act as a collection of domain objects with methods for adding, removing, and retrieving objects.",
+          "code": "// Example: A 'CustomerRepository' for retrieving and persisting 'Customer' aggregates.",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Domain Events",
+          "description": "Events that occur within the domain, representing something significant that has happened. They can be used to trigger actions in other parts of the system or external systems.",
+          "code": "// Example: 'OrderPlacedEvent' -  an event that could trigger an email notification.",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Bounded Contexts",
+          "description": "A specific context or area of the domain to be modeled. Within a bounded context, the ubiquitous language is well-defined and consistent. Different bounded contexts may use the same term with different meanings.",
+          "code": "// Example: An 'Ordering' bounded context and a 'Shipping' bounded context.",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "DDD Concepts - Quiz",
+      "description": "Test your understanding of key DDD concepts.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "Question 1",
+          "description": "What is the purpose of a Ubiquitous Language in DDD?",
+          "code": null,
+          "options": [
+            "To simplify database interactions.",
+            "To provide a common vocabulary for developers only.",
+            "To facilitate communication between developers and domain experts.",
+            "To standardize UI/UX design."
+          ],
+          "answer": "3"
+        },
+        {
+          "title": "Question 2",
+          "description": "Which of the following defines an object by its identity?",
+          "code": null,
+          "options": [
+            "Value Object",
+            "Entity",
+            "Aggregate",
+            "Repository"
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 3",
+          "description": "What is an Aggregate?",
+          "code": null,
+          "options": [
+            "A type of data structure for storing simple data.",
+            "A collection of entities and value objects treated as a single unit.",
+            "A way to access the database.",
+            "A user interface element."
+          ],
+          "answer": "2"
+        },
+        {
+          "title": "Question 4",
+          "description": "What is the purpose of a Repository?",
+          "code": null,
+          "options": [
+            "To store data in a database.",
+            "To provide a way to access aggregate roots.",
+            "To handle user authentication.",
+            "To manage the UI interactions."
+          ],
+          "answer": "2"
+        },
+         {
+          "title": "Question 5",
+          "description": "What distinguishes value objects?",
+          "code": null,
+          "options": [
+            "They are mutable.",
+            "They are defined by their identity",
+            "They are immutable.",
+            "They have state and behavior."
+          ],
+          "answer": "3"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Benefits of DDD",
+      "description": "Domain-Driven Design offers significant benefits for complex software projects.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Improved Communication",
+          "description": "The Ubiquitous Language bridges the gap between developers and domain experts, leading to better understanding and fewer misunderstandings.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Better Software Design",
+          "description": "DDD encourages a focus on the core domain, resulting in software that more accurately reflects business needs and is easier to maintain and evolve.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Increased Flexibility",
+          "description": "Well-defined domain models can adapt to changing business requirements more easily. Changes within a bounded context are less likely to affect other parts of the system.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Reduced Bugs",
+          "description": "Modeling the domain accurately helps in discovering design flaws earlier and leads to a more robust system.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Benefits of DDD - Quiz",
+      "description": "Test your knowledge about the DDD benefits.",
+      "code": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "What is a main benefit of using a Ubiquitous Language?",
+          "code": null,
+          "options":[
+            "Speeds up development time.",
+            "Improves communication between developers and domain experts.",
+            "Simplifies database design.",
+            "Reduces code complexity."
+          ],
+          "answer": "2"
+        },
+         {
+          "title": "Question 2",
+          "description": "How does DDD contribute to better software design?",
+          "code": null,
+          "options":[
+            "By focusing on UI/UX best practices.",
+            "By encouraging a focus on the core domain.",
+            "By minimizing the need for technical documentation.",
+            "By increasing the number of external libraries used."
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "When to Use DDD",
+      "description": "DDD is not a silver bullet and is most effective in certain scenarios.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Complex Domains",
+          "description": "DDD is well-suited for projects with complex business logic and rules.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Projects with Domain Experts",
+          "description": "The presence of domain experts who can collaborate and provide accurate insights into the domain is crucial.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Long-lived Projects",
+          "description": "DDD is advantageous for projects that are expected to evolve over time, as it facilitates adaptation to changing business needs.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Projects with a Need for Flexibility",
+          "description": "When the business requirements are likely to change and the software needs to accommodate those changes easily.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "When to Use DDD - Quiz",
+      "description": "Test your knowledge about the DDD use cases",
+      "code": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "Which type of project benefits the most from DDD?",
+          "code": null,
+          "options":[
+            "Simple CRUD applications.",
+            "Projects with complex business logic.",
+            "Small personal projects.",
+            "Projects solely focused on UI design."
+          ],
+          "answer": "2"
+        },
+         {
+          "title": "Question 2",
+          "description": "What is essential for the successful implementation of DDD?",
+          "code": null,
+          "options":[
+            "A large team of developers.",
+            "The presence of domain experts.",
+            "Using a specific programming language.",
+            "A short project timeline."
+          ],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "Challenges of DDD",
+      "description": "Domain-Driven Design is not without its challenges.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Learning Curve",
+          "description": "DDD has a steeper learning curve compared to simpler approaches.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Complexity",
+          "description": "DDD can introduce significant design complexity, especially in the early stages of a project.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Collaboration Overheads",
+          "description": "Requires strong collaboration between developers and domain experts, which can sometimes be challenging to maintain.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Initial Time Investment",
+          "description": "The initial investment in modeling the domain and setting up the DDD structures can be time-consuming.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "Test",
+      "title": "Challenges of DDD - Quiz",
+      "description": "Test your knowledge regarding the challenges of DDD.",
+      "code": null,
+      "blocks":[
+        {
+          "title": "Question 1",
+          "description": "What is one of the main challenges of DDD?",
+          "code": null,
+          "options":[
+            "It requires minimal collaboration.",
+            "DDD has a steep learning curve.",
+            "It is always the best approach.",
+            "It is simple to implement."
+          ],
+          "answer": "2"
+        },
+         {
+          "title": "Question 2",
+          "description": "Why might DDD introduce complexity?",
+          "code": null,
+          "options":[
+            "Because it simplifies the code.",
+            "Because it focuses on the UI.",
+            "Because of the initial domain modeling and setup.",
+            "Because it reduces the need for documentation."
+          ],
+          "answer": "3"
+        }
+      ]
+    },
+    {
+      "type": "Lesson",
+      "title": "DDD with Layering",
+      "description": "Structuring a DDD project with layers promotes separation of concerns and maintainability.",
+      "code": null,
+      "blocks": [
+        {
+          "type": "Lesson",
+          "title": "Layered Architecture Overview",
+          "description": "DDD projects often use a layered architecture. Common layers include: User Interface (Presentation), Application, Domain, and Infrastructure.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "User Interface (Presentation) Layer",
+          "description": "Handles user interaction and displays information. It translates user input into commands for the application layer and presents the results.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Application Layer",
+          "description": "Orchestrates use cases and coordinates the application's tasks. It uses the domain layer to perform operations but does not contain business rules itself. It often deals with the authorization and transaction management.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Domain Layer",
+          "description": "Contains the core business logic, entities, value objects, aggregates, and domain services. This layer should be independent of other layers.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Infrastructure Layer",
+          "description": "Provides the technical capabilities to support the other layers. This includes data access (repositories), messaging, and external services.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Dependency Direction",
+          "description": "Dependencies should flow inwards, meaning the outer layers depend on the inner layers (Presentation -> Application -> Domain -> Infrastructure). This ensures the core domain remains independent.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "Lesson",
+          "title": "Example Structure",
+          "description": "A possible project structure could be structured by feature or bounded context.",
+          "code": null,
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        },
+        {
+          "type": "codeExample",
+          "title": "Example Project Structure",
+          "description": "Simple example folder for the layered project",
+          "code": "📦 src/\n ├── 📦Presentation/\n │   ├── 📜controller.ts\n │   └── 📜views.ts\n ├── 📦Application/\n │   ├── 📜services.ts\n │   └── 📜dtos.ts\n ├── 📦Domain/\n │   ├── 📜entities.ts\n │   ├── 📜valueObjects.ts\n │   ├── 📜aggregates.ts\n │   └── 📜services.ts\n └── 📦Infrastructure/\n     ├── 📜repositories.ts\n     └── 📜database.ts",
+          "result": null,
+          "resultType": "simulated",
+          "blocks": []
+        }
+      ]
+    }
+  ]
+}
