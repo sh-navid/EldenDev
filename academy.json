@@ -4,16 +4,17 @@
         "description": "Explore the world of programming languages and their practical applications.",
         "courses": [
             {
-                "id": 105,
-                "title": "TypeScript",
-                "description": "Learn TypeScript, a superset of JavaScript that adds static typing.",
+                "id": 100,
+                "title": "JavaScript",
+                "description": "Master the fundamentals of JavaScript, a versatile language for web development.",
                 "levels": [
                     {
                         "level": 1,
                         "title": "Basic",
-                        "url": "Software/Languages/Typescript/Typescript1.json",
-                        "description": "Introduction to TypeScript syntax, types, interfaces, and classes."
-                    }, {
+                        "url": "Software/Languages/Javascript/Javascript1.json",
+                        "description": "Introduction to JavaScript syntax, data types, DOM manipulation, and event handling."
+                    },
+                    {
                         "level": 1,
                         "title": "JavaScript ES5 vs ES6",
                         "url": "Software/Languages/Javascript/Javascript_es5_vs_es6.json",
@@ -75,6 +76,12 @@
                         "title": "Basic",
                         "url": "Software/Languages/Javascript/Javascript1.json",
                         "description": "Introduction to JavaScript syntax, data types, DOM manipulation, and event handling."
+                    },
+                    {
+                        "level": 1,
+                        "title": "JavaScript ES5 vs ES6",
+                        "url": "Software/Languages/Javascript/Javascript_es5_vs_es6.json",
+                        "description": "Understand the differences between ES5 and ES6 (and later) JavaScript."
                     }
                 ]
             },
@@ -88,11 +95,6 @@
                         "title": "Basic",
                         "url": "Software/Languages/Typescript/Typescript1.json",
                         "description": "Introduction to TypeScript syntax, types, interfaces, and classes."
-                    }, {
-                        "level": 1,
-                        "title": "JavaScript ES5 vs ES6",
-                        "url": "Software/Languages/Javascript/Javascript_es5_vs_es6.json",
-                        "description": "Understand the differences between ES5 and ES6 (and later) JavaScript."
                     }
                 ]
             },
