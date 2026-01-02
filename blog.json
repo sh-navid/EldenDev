@@ -8,7 +8,7 @@
         "Blogs": [
             {
                 "image": "Other",
-                "state": "deactive",
+                "state": "active",
                 "path": "/blog/:lang/top-10-ai-tools-and-services-to-boost-your-productivity"
             },
             {
