@@ -1,0 +1,26 @@
+{
+    "languages": [
+        "en",
+        "fa"
+    ],
+    "categories": {
+        "title": "AI",
+        "Blogs": [
+            {
+                "image": "Other",
+                "state": "deactive",
+                "path": "/blog/:lang/top-10-ai-tools-and-services-to-boost-your-productivity"
+            },
+            {
+                "image": "Other",
+                "state": "deactive",
+                "path": "/blog/:lang/vibe-coding-best-practices"
+            },
+            {
+                "image": "Other",
+                "state": "deactive",
+                "path": "/blog/:lang/top-3-ai-based-games"
+            }
+        ]
+    }
+}
