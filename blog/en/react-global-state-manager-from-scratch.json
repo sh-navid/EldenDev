@@ -4,24 +4,163 @@
   "blocks": [
     {
       "title": "What is State Manager?",
-      "description": "",
+      "description": "A state manager in React is a crucial utility designed to handle and distribute application-wide data. It helps to store and update the application's state, making it accessible to various components without the need for prop drilling. This centralized state management approach simplifies data flow, enhances component reusability, and enhances maintainability, especially in complex applications. State managers allow developers to efficiently manage and synchronize data updates, improving the responsiveness and reliability of React applications. The main goals are to make data accessible to multiple components, centralize state logic, manage state updates, separate state from components, and improve performance and maintainability.",
       "code": null,
       "blocks": []
     },
     {
       "title": "Famous State Managers?",
-      "description": "",
+      "description": "While building a custom state manager can be great for learning, there are many robust state management libraries available for React that offer more features and better performance for production applications. Here are a couple of the popular ones:",
       "code": null,
       "blocks": [
         {
-          "title": "Candidate1",
-          "description": "",
+          "title": "Redux",
+          "description": "Redux is a predictable state container for JavaScript apps. It's often used with React, but it can be used with any other JavaScript UI library. It helps you write applications that behave consistently.",
           "code": null,
           "blocks": []
         },
         {
-          "title": "Candidate2",
-          "description": "",
+          "title": "Zustand",
+          "description": "Zustand is a small, fast, and scalable state-management solution for React. It's known for its simplicity and ease of use, making it a great choice for many projects.",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "Building a Global State Manager from Scratch",
+      "description": "In this section, we'll build a simple global state manager. This will help you understand the concepts behind state management and how it works in React.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "Project Setup with Vite",
+          "description": "Before we dive into creating the state manager, let's set up a new React project using Vite. Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects. It's known for its speed and ease of use.",
+          "code": null,
+          "blocks": [
+            {
+              "title": "Create a new React project using Vite",
+              "description": "Open your terminal and run the following command to create a new React project using Vite.",
+              "code": null,
+              "blocks": [
+                {
+                  "title": "Terminal Commands",
+                  "description": "Run these terminal commands to create and start the React project.",
+                  "code": "#[[Terminal]]\n# Create a new React project with Vite\nnpm create vite@latest my-global-state-app --template react\n\n# Navigate into the project directory\ncd my-global-state-app\n\n# Install dependencies\nnpm install\n\n# Start the development server\nnpm run dev",
+                  "blocks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Creating the Global State Manager Component (GlobalStateManager.jsx)",
+          "description": "Now, let's create the `GlobalStateManager.jsx` file and break down the code step by step.",
+          "code": null,
+          "blocks": [
+            {
+              "title": "1. Import Necessary Modules",
+              "description": "First, import the necessary modules from React: `useState`, `createContext`, and `useContext`. `useState` allows you to manage the state, `createContext` is used to create a context for sharing the state, and `useContext` is used to consume the context.",
+              "code": "```javascript\nimport { useState, createContext, useContext } from 'react';\n```",
+              "blocks": []
+            },
+            {
+              "title": "2. Create a Context",
+              "description": "Create a context using `createContext`. This context will hold the global state and provide it to the components that need it.",
+              "code": "```javascript\nconst StoreContext = createContext();\n```",
+              "blocks": []
+            },
+            {
+              "title": "3. Create a Custom Hook for Global State",
+              "description": "Create a custom hook `useGlobalState` to easily access the global state and actions from any component. This hook uses `useContext` to consume the `StoreContext`.",
+              "code": "```javascript\nexport const useGlobalState = () => {\n    return useContext(StoreContext);\n};\n```",
+              "blocks": []
+            },
+            {
+              "title": "4. Create a Provider Component",
+              "description": "Create a `StoreProvider` component to wrap your application. This component will provide the global state and actions to its children using the `StoreContext.Provider`.",
+              "code": "```javascript\nexport const StoreProvider = ({ children }) => {\n    // Initial state\n    const [globalState, setGlobalState] = useState({\n        count: 0,\n        name: 'Initial Name',\n        // other global state variables go here\n    });\n\n    // Action to update the state\n    const actions = {\n        update: (key, value) => {\n            setGlobalState(prevState => ({ ...prevState, [key]: value }));\n        },\n        // other actions\n    };\n\n    const value = {\n        globalState,\n        actions,\n    };\n\n    return (\n        <StoreContext.Provider value={value}>\n            {children}\n        </StoreContext.Provider>\n    );\n};\n```",
+              "blocks": [
+                {
+                  "title": "Initial State",
+                  "description": "The `globalState` is initialized using the `useState` hook. It holds the initial values of your global state variables (e.g., `count` and `name`).",
+                  "code": "```javascript\n const [globalState, setGlobalState] = useState({\n        count: 0,\n        name: 'Initial Name',\n        // other global state variables go here\n    });\n```",
+                  "blocks": []
+                },
+                {
+                  "title": "Actions",
+                  "description": "The `actions` object contains functions that can be used to update the global state. In this example, we have an `update` action that allows you to update specific keys in the `globalState`.",
+                  "code": "```javascript\n   const actions = {\n        update: (key, value) => {\n            setGlobalState(prevState => ({ ...prevState, [key]: value }));\n        },\n        // other actions\n    };\n```",
+                  "blocks": []
+                },
+                {
+                  "title": "Value",
+                  "description": "The `value` object combines the `globalState` and the `actions`, making them available to the consuming components through the context.",
+                  "code": "```javascript\n const value = {\n        globalState,\n        actions,\n    };\n```",
+                  "blocks": []
+                },
+                {
+                  "title": "Provider",
+                  "description": "The `StoreContext.Provider` makes the `value` available to all components within its scope.",
+                  "code": "```javascript\n  return (\n        <StoreContext.Provider value={value}>\n            {children}\n        </StoreContext.Provider>\n    );\n```",
+                  "blocks": []
+                }
+              ]
+            },
+            {
+              "title": "4. Implementing a Test Component to Use the Global State",
+              "description": "Create a test component to demonstrate how to use the global state. This component will access the global state using the `useGlobalState` hook and display its values.",
+              "code": "```javascript\nconst TestComponent = () => {\n    const { globalState, actions } = useGlobalState();\n\n    const handleUpdateName = () => {\n        actions.update('name', 'Updated Name');\n    };\n\n    return (\n        <div>\n            <p>Count: {globalState.count}</p>\n            <p>Name: {globalState.name}</p>\n            <button onClick={() => actions.update('count', globalState.count + 1)}>Increment Count</button>\n            <button onClick={handleUpdateName}>Update Name</button>\n        </div>\n    );\n};\n\nexport default TestComponent;\n```",
+              "blocks": [
+                {
+                  "title": "Accessing Global State",
+                  "description": "The `useGlobalState` hook is used to access the `globalState` and `actions`.",
+                  "code": "```javascript\nconst { globalState, actions } = useGlobalState();\n```",
+                  "blocks": []
+                },
+                {
+                  "title": "Updating the State",
+                  "description": "Button click handlers call the actions to update the global state via the `actions.update()` method which we defined in StoreProvider.",
+                  "code": "```javascript\n   const handleUpdateName = () => {\n        actions.update('name', 'Updated Name');\n    };\n```",
+                  "blocks": []
+                },
+                {
+                  "title": "Displaying the State",
+                  "description": "The component displays the values of the `count` and `name` from the global state.",
+                  "code": "```javascript\n <p>Count: {globalState.count}</p>\n<p>Name: {globalState.name}</p>\n```",
+                  "blocks": []
+                }
+              ]
+            },
+            {
+              "title": "5. Using the Global State Manager in your App",
+              "description": "Wrap your main `App` component with the `StoreProvider` to make the global state accessible throughout your application.",
+              "code": null,
+              "blocks": [
+                {
+                  "title": "Modify main.jsx to include StoreProvider and TestComponent",
+                  "description": "Important: Include the `StoreProvider` and your `TestComponent` within your main `App` component in `main.jsx`.",
+                  "code": "```jsx\n//[[src/main.jsx]]\nimport React from 'react'\nimport ReactDOM from 'react-dom/client'\nimport App from './App'\nimport { StoreProvider } from './GlobalStateManager';\n\nReactDOM.createRoot(document.getElementById('root')).render(\n  <React.StrictMode>\n    <StoreProvider>\n        <App />\n    </StoreProvider>\n  </React.StrictMode>,\n)\n```",
+                  "blocks": []
+                },
+                {
+                  "title": "Modify app.jsx to include TestComponent",
+                  "description": "Import and render the components that use the global state in `App.jsx`.",
+                  "code": "```jsx\n//[[src/App.jsx]]\nimport React from 'react';\nimport TestComponent from './GlobalStateManager';\n\nfunction App() {\n  return (\n    <div className=\"App\">\n      <TestComponent />\n    </div>\n  );\n}\n\nexport default App;\n```",
+                  "blocks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "How it Works",
+          "description": "In this setup:\n\n1.  **Context Creation:** `createContext()` creates a context that holds our global state.\n2.  **Provider:** `StoreProvider` manages the state and provides it to all children.\n3.  **Custom Hook:** `useGlobalState()` provides a simple way to access the state and actions within any component.\n4.  **Component Usage:** Components that need access to the global state use `useGlobalState()` to read and update the state.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "Limitations and Improvements",
+          "description": "The described solution is a basic implementation of a global state manager and has some limitations:\n\n*   **State Reset on Route Changes:** The data resets on route changes because the component, and therefore its state, re-renders when the route changes.  To prevent this:\n    *   Use techniques like local storage, session storage, or a state management library (e.g., Redux, Zustand).",
           "code": null,
           "blocks": []
         }
