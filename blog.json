@@ -78,31 +78,31 @@
       "Blogs": [
         {
           "image": "Other",
-          "state": "active",
+          "state": "deactive",
           "path": "/blog/:lang/devops/getting-started-with-k3s",
           "validated": false
         },
         {
           "image": "Other",
-          "state": "active",
+          "state": "deactive",
           "path": "/blog/:lang/devops/kubernetes-best-practices",
           "validated": false
         },
         {
           "image": "Other",
-          "state": "active",
+          "state": "deactive",
           "path": "/blog/:lang/devops/automating-infrastructure-with-ansible",
           "validated": false
         },
         {
           "image": "Other",
-          "state": "active",
+          "state": "deactive",
           "path": "/blog/:lang/devops/containerization-fundamentals",
           "validated": false
         },
         {
           "image": "Other",
-          "state": "active",
+          "state": "deactive",
           "path": "/blog/:lang/devops/infrastructure-as-code-with-terraform",
           "validated": false
         }
