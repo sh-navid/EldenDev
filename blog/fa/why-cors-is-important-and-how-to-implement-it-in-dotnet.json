@@ -1,0 +1,126 @@
+{
+  "title": "اهمیت CORS و نحوه پیاده‌سازی آن در .NET",
+  "description": "اهمیت Cross-Origin Resource Sharing (CORS) را بررسی کنید و نحوه پیاده‌سازی مؤثر آن را در برنامه‌های .NET خود برای فعال کردن ارتباط امن بین مبداهای مختلف کشف کنید.",
+  "blocks": [
+    {
+      "title": "مقدمه ای بر CORS",
+      "description": "Cross-Origin Resource Sharing (CORS) یک مکانیسم امنیتی است که توسط مرورگرهای وب اجرا می‌شود و به صفحات وب اجازه نمی‌دهد درخواست‌هایی را به دامنه‌ای متفاوت از دامنه‌ای که صفحه وب را ارائه کرده است، ارسال کنند. این یک ویژگی امنیتی حیاتی برای جلوگیری از درخواست‌های غیرمجاز وب‌سایت‌های مخرب به داده‌های حساس کاربر است.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "مبدا چیست؟",
+          "description": "یک مبدا توسط پروتکل (به عنوان مثال، HTTP یا HTTPS)، دامنه و پورت تعریف می‌شود. دو منبع دارای مبدا یکسانی هستند اگر پروتکل، دامنه و پورت یکسانی داشته باشند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "سیاست مبدا یکسان",
+          "description": "سیاست مبدا یکسان (SOP) یک مفهوم امنیتی اساسی در مرورگرهای وب است. این تعاملات بین مبداهای مختلف را محدود می کند. CORS یک مکانیسم برای کاهش این سیاست در صورت لزوم فراهم می کند.",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "چرا CORS مهم است",
+      "description": "CORS نقش حیاتی در امنیت وب با کنترل نحوه تعامل یک صفحه وب با منابع از یک مبدا متفاوت دارد. بدون CORS، برنامه‌های وب در برابر حملات مختلف آسیب‌پذیر خواهند بود.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "محافظت در برابر Cross-Site Scripting (XSS)",
+          "description": "CORS به محافظت در برابر حملات XSS کمک می کند، جایی که یک اسکریپت مخرب که در یک وب سایت تزریق می شود، سعی می کند به داده های حساس از یک دامنه دیگر دسترسی پیدا کند. با کنترل اینکه کدام مبداها مجاز هستند، CORS از دسترسی غیرمجاز جلوگیری می کند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "کاهش حملات Cross-Site Request Forgery (CSRF)",
+          "description": "CORS یک دفاع در برابر حملات CSRF ارائه می دهد. حملات CSRF کاربر را فریب می‌دهند تا درخواست‌های ناخواسته را به یک برنامه وب که در حال حاضر در آن احراز هویت شده‌اند، ارسال کنند. CORS به اعتبارسنجی مبدا درخواست‌ها کمک می‌کند و اجرای موفقیت‌آمیز حملات CSRF را دشوارتر می‌کند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "افزایش امنیت برنامه های وب",
+          "description": "CORS با اعمال محدودیت‌های مبتنی بر مبدا، تضمین می‌کند که منابع فقط توسط برنامه‌های وب مجاز قابل دسترسی هستند و به ایجاد یک محیط وب امن کمک می‌کند.",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "پیاده سازی CORS در برنامه های .NET",
+      "description": "در اینجا نحوه پیاده سازی CORS در برنامه های .NET (ASP.NET Core) آمده است.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "1. نصب (در صورت نیاز)",
+          "description": "پشتیبانی CORS معمولاً به طور پیش فرض در پروژه‌های ASP.NET Core گنجانده شده است. معمولاً نیازی به نصب بسته‌های خاصی ندارید.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "2. پیکربندی CORS در `Program.cs`",
+          "description": "در فایل `Program.cs` خود، CORS را پیکربندی کنید. این معمولاً شامل افزودن میان‌افزار CORS به خط لوله درخواست و تعریف خط‌مشی‌های CORS است.",
+          "code": "//[[Program.cs]]\nvar builder = WebApplication.CreateBuilder(args);\n\n// Add services to the container.\nbuilder.Services.AddControllers();\n// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle\nbuilder.Services.AddEndpointsApiExplorer();\nbuilder.Services.AddSwaggerGen();\n\n// Configure CORS - Option 1: Allow all origins (for development)\n//builder.Services.AddCors(options =>\n//{\n//    options.AddPolicy(\"AllowAll\",\n//        builder =>\n//        {\n//            builder.AllowAnyOrigin()\n//                   .AllowAnyMethod()\n//                   .AllowAnyHeader();\n//        });\n//});\n\n// Configure CORS - Option 2: Allow specific origins (recommended for production)\nbuilder.Services.AddCors(options =>\n{\n    options.AddPolicy(\"MyAllowedOrigins\",\n        builder =>\n        {\n            builder.WithOrigins(\"http://localhost:3000\", \"https://example.com\") // Replace with your origins\n                   .AllowAnyMethod()\n                   .AllowAnyHeader();\n        });\n});\n\n\nvar app = builder.Build();\n\n// Configure the HTTP request pipeline.\nif (app.Environment.IsDevelopment())\n{\n    app.UseSwagger();\n    app.UseSwaggerUI();\n}\n\napp.UseHttpsRedirection();\n\n// Use CORS - apply after UseRouting and before UseAuthorization\n//app.UseCors(\"AllowAll\"); // If using AllowAll policy\napp.UseCors(\"MyAllowedOrigins\"); // If using specific origins policy\n\napp.UseAuthorization();\n\napp.MapControllers();\n\napp.Run();",
+          "language": "csharp",
+          "blocks": []
+        },
+        {
+          "title": "3. اعمال CORS به کنترلرها یا اکشن ها (اختیاری)",
+          "description": "در حالی که پیکربندی جهانی در `Program.cs` اکثر موارد را پوشش می دهد، می‌توانید در صورت نیاز خط‌مشی‌های CORS را در سطح کنترل‌کننده یا اکشن اعمال کنید و کنترل دقیق‌تری را فراهم کنید.",
+          "code": "//[[Controllers/MyController.cs]]\nusing Microsoft.AspNetCore.Mvc;\n\nnamespace YourNamespace.Controllers\n{\n    [ApiController]\n    [Route(\"[controller]\")]\n    //[EnableCors(\"AllowAll\")]  // Apply the \"AllowAll\" policy to this controller - or use the specific one you defined\n    [EnableCors(\"MyAllowedOrigins\")]\n    public class MyController : ControllerBase\n    {\n        [HttpGet(\"Get\")]\n        public IActionResult Get()\n        {\n            return Ok(new { Message = \"Hello from the API!\" });\n        }\n    }\n}",
+          "language": "csharp",
+          "blocks": []
+        },
+        {
+          "title": "4. درخواست های Preflight",
+          "description": "برای درخواست‌های پیچیده‌تر (به عنوان مثال، استفاده از متدهایی مانند `PUT`، `DELETE` یا هدرهای سفارشی)، مرورگر معمولاً یک درخواست OPTIONS preflight را قبل از درخواست واقعی به سرور ارسال می‌کند. پیکربندی CORS سرور شما باید این درخواست‌های preflight را به درستی مدیریت کند. پیکربندی `AddCors` این کار را به طور خودکار انجام می‌دهد.",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "بهترین روش ها و ملاحظات",
+      "description": "برای اطمینان از یک پیاده‌سازی CORS امن و کاربردی، این بهترین روش‌ها را دنبال کنید.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "با مبداها خاص باشید",
+          "description": "هرگز از `AllowAnyOrigin()` در تولید استفاده نکنید. در عوض، مبداهای مجاز را صریحاً مشخص کنید (به عنوان مثال، `WithOrigins(\"https://yourdomain.com\")`).",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "از HTTPS استفاده کنید",
+          "description": "همیشه API خود را از طریق HTTPS ارائه دهید تا از داده های در حال انتقال محافظت کنید.",
+          "code": null,
+          "blocks": []
+        },
+        {
+            "title": "متدها و هدرهای مجاز را محدود کنید",
+            "description": "فقط متدهای HTTP (به عنوان مثال، GET، POST، PUT، DELETE) و هدرهایی را مجاز کنید که API شما واقعاً به آنها نیاز دارد. این کار سطح حمله را کاهش می دهد.",
+            "code": null,
+            "blocks": []
+        },
+        {
+          "title": "تست",
+          "description": "پیکربندی CORS خود را به طور کامل آزمایش کنید تا اطمینان حاصل شود که درخواست‌ها از مبداهای مجاز موفقیت‌آمیز هستند و درخواست‌ها از مبداهای مسدود شده به درستی رد می‌شوند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+            "title": "ساده نگه دارید",
+            "description": "از پیکربندی های CORS بیش از حد پیچیده خودداری کنید. با محدودکننده‌ترین تنظیمات شروع کنید و فقط در صورت لزوم آنها را گسترش دهید.",
+            "code": null,
+            "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "نتیجه",
+      "description": "CORS یک ویژگی امنیتی مهم برای برنامه‌های وب است که با اعمال محدودیت‌های مبتنی بر مبدا، از حملات مختلف محافظت می‌کند. پیاده‌سازی ایمن CORS در برنامه‌های .NET شما برای فعال کردن ارتباط بین مبداها و در عین حال کاهش خطرات امنیتی ضروری است. با پیروی از بهترین روش‌های مشخص‌شده در این راهنما، می‌توانید برنامه‌های وب قوی و امن ایجاد کنید.",
+      "code": null,
+      "blocks": []
+    }
+  ]
+}

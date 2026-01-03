@@ -9,7 +9,7 @@
       "Blogs": [
         {
           "image": "Other",
-          "state": "active",
+          "state": "deactive",
           "path": "/blog/:lang/top-10-ai-tools-and-services-to-boost-your-productivity"
         },
         {
@@ -31,17 +31,27 @@
           "image": "Other",
           "state": "active",
           "path": "/blog/:lang/react-global-state-manager-from-scratch",
-          "github":"https://github.com/sh-navid/blog/example/react/state_manager_from_scratch"
-        }
-      ]
-    },
-    {
-      "title": "Programming/Frontend/ReactJs",
-      "Blogs": [
+          "github": "https://github.com/sh-navid/blog/example/react/state_manager_from_scratch"
+        },
         {
           "image": "Other",
           "state": "active",
           "path": "/blog/:lang/i18n-best-practices-and-implementations"
+        }
+      ]
+    },
+    {
+      "title": "Programming/Backend/DotNet",
+      "Blogs": [
+        {
+          "image": "Other",
+          "state": "active",
+          "path": "/blog/:lang/why-cors-is-important-and-how-to-implement-it-in-dotnet"
+        },
+        {
+          "image": "Other",
+          "state": "active",
+          "path": "/blog/:lang/content-security-policy-and-implementation-in-dotnet"
         }
       ]
     }

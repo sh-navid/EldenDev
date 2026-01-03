@@ -1,0 +1,152 @@
+{
+  "title": "سیاست امنیت محتوا (CSP) و پیاده‌سازی آن در .NET",
+  "description": "مفهوم سیاست امنیت محتوا (CSP)، اهمیت آن در امنیت وب و چگونگی پیاده‌سازی مؤثر آن در برنامه‌های .NET خود را برای کاهش حملات مختلف مبتنی بر وب بررسی کنید.",
+  "blocks": [
+    {
+      "title": "مقدمه‌ای بر سیاست امنیت محتوا (CSP)",
+      "description": "سیاست امنیت محتوا (CSP) یک استاندارد امنیتی است که توسط مرورگرهای وب برای کاهش و شناسایی انواع خاصی از حملات، مانند حملات Cross-Site Scripting (XSS) و حملات تزریق داده، اجرا می‌شود. CSP با اجازه دادن به شما برای کنترل منابعی که مرورگر مجاز به بارگذاری آن‌ها برای یک صفحه معین است، کار می‌کند.",
+      "code": null,
+      "blocks": []
+    },
+    {
+      "title": "چرا CSP مهم است",
+      "description": "CSP برای افزایش امنیت برنامه‌های وب با کاهش سطح حمله و کاهش خطرات مرتبط با محتوای مخرب بسیار مهم است.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "کاهش حملات Cross-Site Scripting (XSS)",
+          "description": "CSP در درجه اول برای کاهش حملات XSS طراحی شده است. با تعریف یک سیاست که منابعی را که مرورگر مجاز به بارگذاری اسکریپت‌ها، سبک‌ها و سایر منابع از آن است، مشخص می‌کند، CSP از اجرای اسکریپت‌های مخرب که به صفحه تزریق شده‌اند جلوگیری می‌کند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "محافظت در برابر حملات تزریق داده",
+          "description": "CSP همچنین می‌تواند با محدود کردن منابعی که منابع می‌توانند از آن‌ها بارگیری شوند، به محافظت در برابر حملات تزریق داده کمک کند و از تزریق محتوای یا داده‌های مخرب جلوگیری کند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "کاهش سطح حمله",
+          "description": "CSP با محدود کردن منابعی که مرورگر می‌تواند بارگیری کند، به کاهش سطح حمله کمک می‌کند. این محدودیت، سوء استفاده از آسیب‌پذیری‌ها در برنامه‌های وب را برای مهاجمان دشوارتر می‌کند.",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "پیاده‌سازی CSP در برنامه‌های .NET",
+      "description": "در اینجا نحوه پیاده‌سازی CSP در برنامه‌های .NET (ASP.NET Core) آورده شده است.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "1. گزینه‌های پیکربندی",
+          "description": "  CSP در درجه اول از طریق هدر پاسخ HTTP `Content-Security-Policy` پیکربندی می‌شود. چندین دستورالعمل در داخل هدر وجود دارد که هر کدام نوع متفاوتی از منبع را کنترل می‌کنند. دستورالعمل‌های کلیدی عبارتند از:\n\n*   `default-src`: سیاست پیش‌فرض را برای واکشی منابع (به عنوان مثال، اسکریپت‌ها، تصاویر، فونت‌ها) تنظیم می‌کند. اگر یک دستورالعمل خاص‌تر (مانند `script-src`) تنظیم نشده باشد، از این مورد استفاده می‌شود.\n*   `script-src`: منابع معتبر را برای جاوا اسکریپت مشخص می‌کند.\n*   `style-src`: منابع معتبر را برای شیوه‌نامه‌ها (CSS) مشخص می‌کند.\n*   `img-src`: منابع معتبر را برای تصاویر مشخص می‌کند.\n*   `font-src`: منابع معتبر را برای فونت‌ها مشخص می‌کند.\n*   `connect-src`: منابع معتبر را برای اتصالات (به عنوان مثال، XHR، WebSocket) مشخص می‌کند.\n*   `object-src`: منابع معتبر را برای افزونه‌ها (به عنوان مثال، `<object>`، `<embed>`) مشخص می‌کند.\n*   `media-src`: منابع معتبر را برای رسانه (به عنوان مثال، صدا، ویدئو) مشخص می‌کند.\n*   `frame-src`: منابع معتبر را برای فریم‌ها و iframes مشخص می‌کند.\n*   `form-action`: URLهای معتبری را که می‌توانند به عنوان هدف ارسال فرم استفاده شوند، مشخص می‌کند.\n*   `base-uri`: URLهایی را که می‌توانند در عنصر `<base>` استفاده شوند، مشخص می‌کند.\n*   `report-uri`: یک URL را برای ارسال گزارش در مورد تخلفات سیاست مشخص می‌کند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "2. تنظیم هدر CSP",
+          "description": "چندین راه برای تنظیم سربرگ `Content-Security-Policy` در یک برنامه .NET وجود دارد:",
+          "code": null,
+          "blocks": [
+            {
+              "title": "a. استفاده از میان‌افزار (توصیه‌شده)",
+              "description": "یک مؤلفه میان‌افزار سفارشی برای تنظیم سربرگ ایجاد کنید.",
+              "code": "//[[Middlewares/ContentSecurityPolicyMiddleware.cs]]\nusing Microsoft.AspNetCore.Http;\nusing System.Threading.Tasks;\n\nnamespace YourNamespace.Middlewares\n{\n    public class ContentSecurityPolicyMiddleware\n    {\n        private readonly RequestDelegate _next;\n\n        public ContentSecurityPolicyMiddleware(RequestDelegate next)\n        {\n            _next = next;\n        }\n\n        public async Task Invoke(HttpContext context)\n        {\n            // Define your CSP directives.  This is a basic example; adjust as needed.\n            string csp = \"default-src 'self'; script-src 'self' https://example.com; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com\";\n\n            // Set the header\n            context.Response.Headers.Add(\"Content-Security-Policy\", csp);\n\n            // Call the next middleware in the pipeline\n            await _next(context);\n        }\n    }\n\n    // Extension method to add the middleware in Program.cs\n    public static class ContentSecurityPolicyMiddlewareExtensions\n    {\n        public static IApplicationBuilder UseContentSecurityPolicy(this IApplicationBuilder builder)\n        {\n            return builder.UseMiddleware<ContentSecurityPolicyMiddleware>();\n        }\n    }\n}",
+              "language": "csharp",
+              "blocks": []
+            },
+            {
+              "title": "b. ثبت میان‌افزار در `Program.cs`",
+              "description": "میان‌افزار را در فایل `Program.cs` خود ثبت کنید.",
+              "code": "//[[Program.cs]]\nvar builder = WebApplication.CreateBuilder(args);\n\n// Add services to the container.\n\nbuilder.Services.AddControllers();\n// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle\nbuilder.Services.AddEndpointsApiExplorer();\nbuilder.Services.AddSwaggerGen();\n\nvar app = builder.Build();\n\n// Configure the HTTP request pipeline.\nif (app.Environment.IsDevelopment())\n{\n    app.UseSwagger();\n    app.UseSwaggerUI();\n}\n\napp.UseHttpsRedirection();\n\napp.UseAuthorization();\n\n// Use the CSP middleware.  Make sure it's before any endpoints that serve content\napp.UseContentSecurityPolicy();\n\napp.MapControllers();\n\napp.Run();",
+              "language": "csharp",
+              "blocks": []
+            },
+            {
+                "title": "c. استفاده از فیلترهای ویژگی (کمتر رایج)",
+                "description": "می‌توانید ویژگی‌های سفارشی را به کنترل‌کننده‌ها یا اکشن‌ها اضافه کنید تا هدرها را تنظیم کنید. در حالی که این کار امکان‌پذیر است، اما به طور کلی نگهداری آن کمتر از میان‌افزار است.",
+                "code": null,
+                "blocks": []
+            },
+            {
+                "title": "d. در View (برای تولید توصیه نمی‌شود)",
+                "description": "تنظیم تگ های `<meta>` در HTML شما امکان پذیر است، اما این انعطاف پذیری کمتری دارد و برای همه سناریوها (به عنوان مثال، API) کار نمی کند. این رویکرد به طور کلی برای استفاده در تولید توصیه نمی شود.",
+                "code": null,
+                "blocks": []
+            }
+          ]
+        },
+        {
+          "title": "3. انتخاب دستورالعمل‌های CSP خود",
+          "description": "دستورالعمل‌های CSP خود را با دقت انتخاب کنید. با یک سیاست محدود کننده شروع کنید و به تدریج آن را در صورت نیاز شل کنید. ملاحظات کلیدی:\n\n*   `'self'`: محتوا را از همان مبدأ (پروتکل، دامنه و پورت) مجاز می‌کند.\n*   `'none'`: تمام منابع یک نوع معین را مسدود می‌کند.\n*   `'unsafe-inline'`: جاوا اسکریپت یا CSS درون خطی را مجاز می‌کند. از این مورد خودداری کنید مگر اینکه کاملاً ضروری باشد.\n*   `'unsafe-eval'`: استفاده از `eval()` و عملکردهای مشابه را مجاز می‌کند. از این مورد خودداری کنید.\n*   `data:`: بارگیری منابع از URIهای داده (به عنوان مثال، تصاویر درون خطی) را مجاز می‌کند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "4. گزارش‌دهی (اختیاری اما توصیه می‌شود)",
+          "description": "یک دستورالعمل `report-uri` را در CSP خود پیاده‌سازی کنید تا گزارش‌ها را درباره تخلفات سیاست جمع‌آوری کنید. این گزارش‌ها می‌توانند به شما در شناسایی مشکلات و اصلاح خط‌مشی کمک کنند.\n\n*   یک endpoint (به عنوان مثال، `/csp-report`) برای دریافت گزارش‌ها ایجاد کنید.\n*   گزارش‌ها به صورت JSON ارسال می‌شوند.",
+          "code": "//[[Controllers/CSPReportController.cs]]\nusing Microsoft.AspNetCore.Mvc;\nusing Microsoft.Extensions.Logging;\n\nnamespace YourNamespace.Controllers\n{\n    [ApiController]\n    [Route(\"[controller]\")]\n    public class CSPReportController : ControllerBase\n    {\n        private readonly ILogger<CSPReportController> _logger;\n\n        public CSPReportController(ILogger<CSPReportController> logger)\n        {\n            _logger = logger;\n        }\n\n        [HttpPost(\"Report\")]\n        public IActionResult Report([FromBody] object report)\n        {\n            _logger.LogWarning(\"CSP Violation Report: {report}\", report);\n            // Process the report (e.g., log to a database, send an alert)\n            return Ok();\n        }\n    }\n}",
+          "language": "csharp",
+          "blocks": []
+        },
+        {
+            "title": "5. مثال CSP با گزارش‌دهی",
+            "description": "این یک مثال کامل‌تر است، از جمله یک دستورالعمل `report-uri`.",
+            "code": "//[[Middlewares/ContentSecurityPolicyMiddleware.cs]]\nusing Microsoft.AspNetCore.Http;\nusing System.Threading.Tasks;\n\nnamespace YourNamespace.Middlewares\n{\n    public class ContentSecurityPolicyMiddleware\n    {\n        private readonly RequestDelegate _next;\n\n        public ContentSecurityPolicyMiddleware(RequestDelegate next)\n        {\n            _next = next;\n        }\n\n        public async Task Invoke(HttpContext context)\n        {\n            // Define your CSP directives\n            string csp = \"default-src 'self'; script-src 'self' https://example.com; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; report-uri /CSPReport/Report\";\n\n            // Set the header\n            context.Response.Headers.Add(\"Content-Security-Policy\", csp);\n\n            // Call the next middleware in the pipeline\n            await _next(context);\n        }\n    }\n\n    // Extension method to add the middleware in Program.cs\n    public static class ContentSecurityPolicyMiddlewareExtensions\n    {\n        public static IApplicationBuilder UseContentSecurityPolicy(this IApplicationBuilder builder)\n        {\n            return builder.UseMiddleware<ContentSecurityPolicyMiddleware>();\n        }\n    }\n}",
+            "language": "csharp",
+            "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "بهترین روش‌ها و ملاحظات",
+      "description": "برای اطمینان از مؤثر بودن CSP و عدم شکستن سایت خود، این بهترین روش‌ها را دنبال کنید.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "با یک سیاست محدودکننده شروع کنید",
+          "description": "با یک سیاست بسیار محدودکننده (مثلاً `default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;`) شروع کنید و به تدریج آن را در صورت نیاز شل کنید. این امر خطر معرفی آسیب‌پذیری‌ها را به حداقل می‌رساند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "در طول توسعه از حالت Report-Only استفاده کنید",
+          "description": "در طول توسعه، به جای `Content-Security-Policy` از هدر `Content-Security-Policy-Report-Only` استفاده کنید. این به شما امکان می‌دهد تخلفات سیاست را بدون مسدود کردن منابع نظارت کنید. سپس می‌توانید گزارش‌ها را تجزیه و تحلیل کنید و خط‌مشی خود را قبل از اعمال آن تنظیم کنید.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "کاملاً تست کنید",
+          "description": "CSP خود را به طور گسترده آزمایش کنید تا اطمینان حاصل کنید که عملکرد سایت شما را مختل نمی‌کند. به هر گونه خطای کنسول مربوط به تخلفات CSP توجه کنید. از نقطه پایانی گزارش‌دهی خود برای شناسایی مشکلات استفاده کنید.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "از 'unsafe-inline' و 'unsafe-eval' خودداری کنید",
+          "description": "این دستورالعمل‌ها، CSP را برای اسکریپت‌ها و استایل‌ها غیرفعال می‌کنند. فقط در آخرین راه‌حل از آن‌ها استفاده کنید. در عوض، از nonce یا هش‌ها برای اسکریپت‌ها و استایل‌های درون خطی استفاده کنید.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "از Nonces یا Hashes برای اسکریپت‌ها و استایل‌های درون خطی استفاده کنید",
+          "description": "هنگامی که نیاز به اجازه دادن به اسکریپت‌ها یا استایل‌های درون خطی دارید، از یک nonce (یک رشته تصادفی منحصر به فرد) یا یک هش از اسکریپت یا استایل استفاده کنید. nonce باید از سمت سرور تولید شود و هم در هدر CSP و هم در تگ `<script>` یا `<style>` گنجانده شود.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "خط‌مشی خود را به‌روز نگه دارید",
+          "description": "همانطور که وب‌سایت شما تکامل می‌یابد، CSP خود را بررسی و به‌روز کنید تا تغییرات در منابع و عملکرد سایت شما منعکس شود.",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "نتیجه‌گیری",
+      "description": "سیاست امنیت محتوا (CSP) یک مکانیسم امنیتی حیاتی برای محافظت از برنامه‌های وب در برابر XSS و سایر حملات است. پیاده‌سازی یک CSP با تعریف خوب در برنامه‌های .NET شما برای ایجاد یک محیط وب امن ضروری است. با پیروی از بهترین روش‌های مشخص شده در این راهنما، می‌توانید وضعیت امنیتی برنامه خود را بهبود بخشید و از کاربران خود در برابر تهدیدات احتمالی محافظت کنید.",
+      "code": null,
+      "blocks": []
+    }
+  ]
+}
