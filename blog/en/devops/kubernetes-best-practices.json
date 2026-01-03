@@ -1,0 +1,5 @@
+{
+    "title": "Kubernetes Best Practices",
+    "description": "A curated collection of best practices for deploying and managing applications on Kubernetes.",
+    "version": "1.0.0"
+}

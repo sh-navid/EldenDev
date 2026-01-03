@@ -1,0 +1,5 @@
+{
+  "title": "Getting Started with K3s",
+  "description": "A beginner's guide to setting up and using K3s, a lightweight Kubernetes distribution, for edge computing and development.",
+  "version": "1.0.0"
+}
