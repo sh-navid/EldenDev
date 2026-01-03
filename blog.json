@@ -71,6 +71,12 @@
           "state": "active",
           "path": "/blog/:lang/content-security-policy-and-implementation-in-dotnet",
           "validated": false
+        },
+        {
+          "image": "Other",
+          "state": "deactive",
+          "path": "/blog/:lang/double-spending-problem-dotnet-ef",
+          "validated": false
         }
       ]
     },

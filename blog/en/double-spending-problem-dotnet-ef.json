@@ -1,0 +1,5 @@
+{
+  "title": "Double Spending Problem in .NET with Entity Framework",
+  "description": "An explanation of the double-spending problem in the context of financial transactions, and how to address it using .NET and Entity Framework, covering concurrency control mechanisms such as optimistic locking." ,
+  "version": "1.0.0"
+}
