@@ -30,7 +30,8 @@
         {
           "image": "Other",
           "state": "active",
-          "path": "/blog/:lang/react-global-state-manager-from-scratch"
+          "path": "/blog/:lang/react-global-state-manager-from-scratch",
+          "github":"https://github.com/sh-navid/blog/example/react/state_manager_from_scratch"
         }
       ]
     }
