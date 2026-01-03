@@ -60,48 +60,56 @@
             {
               "title": "1. Import Necessary Modules",
               "description": "First, import the necessary modules from React: `useState`, `createContext`, and `useContext`. `useState` allows you to manage the state, `createContext` is used to create a context for sharing the state, and `useContext` is used to consume the context.",
-              "code": "```javascript\nimport { useState, createContext, useContext } from 'react';\n```",
+              "code": "import { useState, createContext, useContext } from 'react';",
+              "language": "javascript",
               "blocks": []
             },
             {
               "title": "2. Create a Context",
               "description": "Create a context using `createContext`. This context will hold the global state and provide it to the components that need it.",
-              "code": "```javascript\nconst StoreContext = createContext();\n```",
+              "code": "const StoreContext = createContext();",
+              "language": "javascript",
               "blocks": []
             },
             {
               "title": "3. Create a Custom Hook for Global State",
               "description": "Create a custom hook `useGlobalState` to easily access the global state and actions from any component. This hook uses `useContext` to consume the `StoreContext`.",
-              "code": "```javascript\nexport const useGlobalState = () => {\n    return useContext(StoreContext);\n};\n```",
+              "code": "export const useGlobalState = () => {\n    return useContext(StoreContext);\n};",
+              "language": "javascript",
               "blocks": []
             },
             {
               "title": "4. Create a Provider Component",
               "description": "Create a `StoreProvider` component to wrap your application. This component will provide the global state and actions to its children using the `StoreContext.Provider`.",
-              "code": "```javascript\nexport const StoreProvider = ({ children }) => {\n    // Initial state\n    const [globalState, setGlobalState] = useState({\n        count: 0,\n        name: 'Initial Name',\n        // other global state variables go here\n    });\n\n    // Action to update the state\n    const actions = {\n        update: (key, value) => {\n            setGlobalState(prevState => ({ ...prevState, [key]: value }));\n        },\n        // other actions\n    };\n\n    const value = {\n        globalState,\n        actions,\n    };\n\n    return (\n        <StoreContext.Provider value={value}>\n            {children}\n        </StoreContext.Provider>\n    );\n};\n```",
+              "code": "export const StoreProvider = ({ children }) => {\n    // Initial state\n    const [globalState, setGlobalState] = useState({\n        count: 0,\n        name: 'Initial Name',\n        // other global state variables go here\n    });\n\n    // Action to update the state\n    const actions = {\n        update: (key, value) => {\n            setGlobalState(prevState => ({ ...prevState, [key]: value }));\n        },\n        // other actions\n    };\n\n    const value = {\n        globalState,\n        actions,\n    };\n\n    return (\n        <StoreContext.Provider value={value}>\n            {children}\n        </StoreContext.Provider>\n    );\n};",
+              "language": "javascript",
               "blocks": [
                 {
                   "title": "Initial State",
                   "description": "The `globalState` is initialized using the `useState` hook. It holds the initial values of your global state variables (e.g., `count` and `name`).",
-                  "code": "```javascript\n const [globalState, setGlobalState] = useState({\n        count: 0,\n        name: 'Initial Name',\n        // other global state variables go here\n    });\n```",
+                  "code": " const [globalState, setGlobalState] = useState({\n        count: 0,\n        name: 'Initial Name',\n        // other global state variables go here\n    });",
+                  "language": "javascript",
                   "blocks": []
                 },
                 {
                   "title": "Actions",
                   "description": "The `actions` object contains functions that can be used to update the global state. In this example, we have an `update` action that allows you to update specific keys in the `globalState`.",
-                  "code": "```javascript\n   const actions = {\n        update: (key, value) => {\n            setGlobalState(prevState => ({ ...prevState, [key]: value }));\n        },\n        // other actions\n    };\n```",
+                  "code": "   const actions = {\n        update: (key, value) => {\n            setGlobalState(prevState => ({ ...prevState, [key]: value }));\n        },\n        // other actions\n    };",
+                  "language": "javascript",
                   "blocks": []
                 },
                 {
                   "title": "Value",
                   "description": "The `value` object combines the `globalState` and the `actions`, making them available to the consuming components through the context.",
-                  "code": "```javascript\n const value = {\n        globalState,\n        actions,\n    };\n```",
+                  "code": " const value = {\n        globalState,\n        actions,\n    };",
+                  "language": "javascript",
                   "blocks": []
                 },
                 {
                   "title": "Provider",
                   "description": "The `StoreContext.Provider` makes the `value` available to all components within its scope.",
-                  "code": "```javascript\n  return (\n        <StoreContext.Provider value={value}>\n            {children}\n        </StoreContext.Provider>\n    );\n```",
+                  "code": "  return (\n        <StoreContext.Provider value={value}>\n            {children}\n        </StoreContext.Provider>\n    );",
+                  "language": "javascript",
                   "blocks": []
                 }
               ]
@@ -109,24 +117,28 @@
             {
               "title": "4. Implementing a Test Component to Use the Global State",
               "description": "Create a test component to demonstrate how to use the global state. This component will access the global state using the `useGlobalState` hook and display its values.",
-              "code": "```javascript\nconst TestComponent = () => {\n    const { globalState, actions } = useGlobalState();\n\n    const handleUpdateName = () => {\n        actions.update('name', 'Updated Name');\n    };\n\n    return (\n        <div>\n            <p>Count: {globalState.count}</p>\n            <p>Name: {globalState.name}</p>\n            <button onClick={() => actions.update('count', globalState.count + 1)}>Increment Count</button>\n            <button onClick={handleUpdateName}>Update Name</button>\n        </div>\n    );\n};\n\nexport default TestComponent;\n```",
+              "code": "const TestComponent = () => {\n    const { globalState, actions } = useGlobalState();\n\n    const handleUpdateName = () => {\n        actions.update('name', 'Updated Name');\n    };\n\n    return (\n        <div>\n            <p>Count: {globalState.count}</p>\n            <p>Name: {globalState.name}</p>\n            <button onClick={() => actions.update('count', globalState.count + 1)}>Increment Count</button>\n            <button onClick={handleUpdateName}>Update Name</button>\n        </div>\n    );\n};\n\nexport default TestComponent;",
+              "language": "javascript",
               "blocks": [
                 {
                   "title": "Accessing Global State",
                   "description": "The `useGlobalState` hook is used to access the `globalState` and `actions`.",
-                  "code": "```javascript\nconst { globalState, actions } = useGlobalState();\n```",
+                  "code": "const { globalState, actions } = useGlobalState();",
+                  "language": "javascript",
                   "blocks": []
                 },
                 {
                   "title": "Updating the State",
                   "description": "Button click handlers call the actions to update the global state via the `actions.update()` method which we defined in StoreProvider.",
-                  "code": "```javascript\n   const handleUpdateName = () => {\n        actions.update('name', 'Updated Name');\n    };\n```",
+                  "code": "   const handleUpdateName = () => {\n        actions.update('name', 'Updated Name');\n    };",
+                  "language": "javascript",
                   "blocks": []
                 },
                 {
                   "title": "Displaying the State",
                   "description": "The component displays the values of the `count` and `name` from the global state.",
-                  "code": "```javascript\n <p>Count: {globalState.count}</p>\n<p>Name: {globalState.name}</p>\n```",
+                  "code": " <p>Count: {globalState.count}</p>\n<p>Name: {globalState.name}</p>",
+                  "language": "javascript",
                   "blocks": []
                 }
               ]
@@ -139,13 +151,15 @@
                 {
                   "title": "Modify main.jsx to include StoreProvider and TestComponent",
                   "description": "Important: Include the `StoreProvider` and your `TestComponent` within your main `App` component in `main.jsx`.",
-                  "code": "```jsx\n//[[src/main.jsx]]\nimport React from 'react'\nimport ReactDOM from 'react-dom/client'\nimport App from './App'\nimport { StoreProvider } from './GlobalStateManager';\n\nReactDOM.createRoot(document.getElementById('root')).render(\n  <React.StrictMode>\n    <StoreProvider>\n        <App />\n    </StoreProvider>\n  </React.StrictMode>,\n)\n```",
+                  "code": "//[[src/main.jsx]]\nimport React from 'react'\nimport ReactDOM from 'react-dom/client'\nimport App from './App'\nimport { StoreProvider } from './GlobalStateManager';\n\nReactDOM.createRoot(document.getElementById('root')).render(\n  <React.StrictMode>\n    <StoreProvider>\n        <App />\n    </StoreProvider>\n  </React.StrictMode>,\n)",
+                  "language": "jsx",
                   "blocks": []
                 },
                 {
                   "title": "Modify app.jsx to include TestComponent",
                   "description": "Import and render the components that use the global state in `App.jsx`.",
-                  "code": "```jsx\n//[[src/App.jsx]]\nimport React from 'react';\nimport TestComponent from './GlobalStateManager';\n\nfunction App() {\n  return (\n    <div className=\"App\">\n      <TestComponent />\n    </div>\n  );\n}\n\nexport default App;\n```",
+                  "code": "//[[src/App.jsx]]\nimport React from 'react';\nimport TestComponent from './GlobalStateManager';\n\nfunction App() {\n  return (\n    <div className=\"App\">\n      <TestComponent />\n    </div>\n  );\n}\n\nexport default App;",
+                  "language": "jsx",
                   "blocks": []
                 }
               ]
