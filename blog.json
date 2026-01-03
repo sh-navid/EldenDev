@@ -10,17 +10,20 @@
         {
           "image": "Other",
           "state": "deactive",
-          "path": "/blog/:lang/top-10-ai-tools-and-services-to-boost-your-productivity"
+          "path": "/blog/:lang/top-10-ai-tools-and-services-to-boost-your-productivity",
+          "validated": false
         },
         {
           "image": "Other",
           "state": "deactive",
-          "path": "/blog/:lang/vibe-coding-best-practices"
+          "path": "/blog/:lang/vibe-coding-best-practices",
+          "validated": false
         },
         {
           "image": "Other",
           "state": "deactive",
-          "path": "/blog/:lang/top-3-ai-based-games"
+          "path": "/blog/:lang/top-3-ai-based-games",
+          "validated": false
         }
       ]
     },
@@ -31,12 +34,14 @@
           "image": "Other",
           "state": "active",
           "path": "/blog/:lang/react-global-state-manager-from-scratch",
-          "github": "https://github.com/sh-navid/blog/example/react/state_manager_from_scratch"
+          "github": "https://github.com/sh-navid/blog/example/react/state_manager_from_scratch",
+          "validated": true
         },
         {
           "image": "Other",
           "state": "active",
-          "path": "/blog/:lang/i18n-best-practices-and-implementations"
+          "path": "/blog/:lang/i18n-best-practices-and-implementations",
+          "validated": true
         }
       ]
     },
@@ -46,12 +51,14 @@
         {
           "image": "Other",
           "state": "active",
-          "path": "/blog/:lang/why-cors-is-important-and-how-to-implement-it-in-dotnet"
+          "path": "/blog/:lang/why-cors-is-important-and-how-to-implement-it-in-dotnet",
+          "validated": false
         },
         {
           "image": "Other",
           "state": "active",
-          "path": "/blog/:lang/content-security-policy-and-implementation-in-dotnet"
+          "path": "/blog/:lang/content-security-policy-and-implementation-in-dotnet",
+          "validated": false
         }
       ]
     }
