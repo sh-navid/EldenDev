@@ -1,0 +1,5 @@
+{
+    "title": "Retrieval-Augmented Generation (RAG) Explained",
+    "description": "An explanation of Retrieval-Augmented Generation (RAG), a technique to improve the accuracy and reliability of large language models (LLMs) by grounding their responses in external knowledge sources.",
+    "version": "1.0.0"
+}
