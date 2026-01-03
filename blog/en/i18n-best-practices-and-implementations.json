@@ -1,6 +1,7 @@
 {
   "title": "I18n Best Practices and Implementations in React",
   "description": "Learn about the best practices and practical implementations of internationalization (i18n) in React applications. Understand how to make your React applications multilingual, ensuring a global audience can access and understand your content.",
+  "version":"1.0.0",
   "blocks": [
     {
       "title": "Introduction to Internationalization (i18n)",

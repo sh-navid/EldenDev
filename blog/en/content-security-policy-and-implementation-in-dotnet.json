@@ -1,6 +1,7 @@
 {
   "title": "Content Security Policy (CSP) and Implementation in .NET",
   "description": "Explore the concept of Content Security Policy (CSP), its importance in web security, and how to effectively implement it in your .NET applications to mitigate various web-based attacks.",
+  "version":"1.0.0",
   "blocks": [
     {
       "title": "Introduction to Content Security Policy (CSP)",

@@ -1,6 +1,7 @@
 {
   "title": "Why CORS is Important and How to Implement It in .NET",
   "description": "Explore the significance of Cross-Origin Resource Sharing (CORS) and how to effectively implement it in your .NET applications to enable secure communication between different origins.",
+  "version":"1.0.0",
   "blocks": [
     {
       "title": "Introduction to CORS",
