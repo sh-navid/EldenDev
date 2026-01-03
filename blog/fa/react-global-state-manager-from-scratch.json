@@ -1,4 +1,184 @@
 {
-  "title": "ساخت Global State Manager در React از ابتدا",
-  "description": "یاد بگیرید چگونه یک مدیریت کننده حالت سراسری ساده و در عین حال موثر در React ایجاد کنید، بدون تکیه بر کتابخانه‌های خارجی مانند Redux یا Zustand. مفاهیم اصلی را درک کنید و یک راه‌حل سفارشی برای مدیریت حالت در سراسر برنامه بسازید."
+  "title": "ساخت یک مدیریت کننده حالت سراسری در React از ابتدا",
+  "description": "یاد بگیرید چگونه یک مدیریت کننده حالت سراسری ساده و در عین حال موثر در React ایجاد کنید، بدون اتکا به کتابخانه‌های خارجی مانند Redux یا Zustand. مفاهیم اصلی را درک کنید و یک راه‌حل سفارشی برای مدیریت حالت در کل برنامه بسازید." ,
+  "blocks": [
+    {
+      "title": "State Manager چیست؟",
+      "description": "یک مدیریت کننده حالت در React یک ابزار حیاتی است که برای مدیریت و توزیع داده‌های سراسری برنامه طراحی شده است. این به ذخیره و به‌روزرسانی حالت برنامه کمک می‌کند، و آن را برای اجزای مختلف بدون نیاز به prop drilling قابل دسترس می‌سازد. این رویکرد مدیریت حالت متمرکز، جریان داده را ساده می‌کند، قابلیت استفاده مجدد از کامپوننت‌ها را افزایش می‌دهد و قابلیت نگهداری را بهبود می‌بخشد، به‌ویژه در برنامه‌های پیچیده. مدیریت‌کننده‌های حالت به توسعه‌دهندگان اجازه می‌دهند تا به‌طور مؤثر به‌روزرسانی‌های داده‌ها را مدیریت و همگام‌سازی کنند، و پاسخگویی و قابلیت اطمینان برنامه‌های React را بهبود بخشند. اهداف اصلی عبارتند از: در دسترس قرار دادن داده‌ها برای چندین کامپوننت، متمرکز کردن منطق حالت، مدیریت به‌روزرسانی‌های حالت، جدا کردن حالت از کامپوننت‌ها و بهبود عملکرد و قابلیت نگهداری.",
+      "code": null,
+      "blocks": []
+    },
+    {
+      "title": "State Manager های معروف؟",
+      "description": "در حالی که ساختن یک مدیریت‌کننده حالت سفارشی می‌تواند برای یادگیری عالی باشد، کتابخانه‌های مدیریت حالت قدرتمند بسیاری برای React وجود دارد که ویژگی‌های بیشتری و عملکرد بهتری را برای برنامه‌های تولید ارائه می‌دهند. در اینجا چند مورد از موارد محبوب آورده شده است:",
+      "code": null,
+      "blocks": [
+        {
+          "title": "Redux",
+          "description": "Redux یک کانتینر حالت قابل پیش‌بینی برای برنامه‌های JavaScript است. اغلب با React استفاده می‌شود، اما می‌تواند با هر کتابخانه UI JavaScript دیگری استفاده شود. به شما کمک می‌کند برنامه‌هایی بنویسید که به‌طور مداوم رفتار می‌کنند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "Zustand",
+          "description": "Zustand یک راه‌حل مدیریت حالت کوچک، سریع و مقیاس‌پذیر برای React است. به دلیل سادگی و سهولت استفاده شناخته می‌شود و آن را به انتخابی عالی برای بسیاری از پروژه‌ها تبدیل می‌کند.",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "ساخت یک Global State Manager از ابتدا",
+      "description": "در این بخش، ما یک مدیریت کننده حالت سراسری ساده می‌سازیم. این به شما کمک می‌کند مفاهیم پشت مدیریت حالت و نحوه عملکرد آن در React را درک کنید.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "تنظیم پروژه با Vite",
+          "description": "قبل از اینکه به ایجاد مدیریت کننده حالت بپردازیم، اجازه دهید یک پروژه React جدید با استفاده از Vite راه‌اندازی کنیم. Vite یک ابزار ساخت است که هدف آن ارائه یک تجربه توسعه سریع‌تر و سبک‌تر برای پروژه‌های وب مدرن است. این به دلیل سرعت و سهولت استفاده خود شناخته شده است.",
+          "code": null,
+          "blocks": [
+            {
+              "title": "ایجاد یک پروژه React جدید با استفاده از Vite",
+              "description": "ترمینال خود را باز کرده و دستور زیر را برای ایجاد یک پروژه React جدید با استفاده از Vite اجرا کنید.",
+              "code": null,
+              "blocks": [
+                {
+                  "title": "دستورات ترمینال",
+                  "description": "این دستورات ترمینال را برای ایجاد و راه‌اندازی پروژه React اجرا کنید.",
+                  "code": "#[[Terminal]]\n# ایجاد یک پروژه React جدید با Vite\nnpm create vite@latest my-global-state-app --template react\n\n# پیمایش به داخل دایرکتوری پروژه\ncd my-global-state-app\n\n# نصب وابستگی ها\nnpm install\n\n# راه‌اندازی سرور توسعه\nnpm run dev",
+                  "blocks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "ایجاد کامپوننت Global State Manager (GlobalStateManager.jsx)",
+          "description": "حالا، بیایید فایل `GlobalStateManager.jsx` را ایجاد کنیم و کد را گام به گام بررسی کنیم.",
+          "code": null,
+          "blocks": [
+            {
+              "title": "1. وارد کردن ماژول‌های لازم",
+              "description": "ابتدا، ماژول‌های لازم را از React وارد کنید: `useState`, `createContext` و `useContext`. `useState` به شما امکان می‌دهد حالت را مدیریت کنید، `createContext` برای ایجاد یک context برای اشتراک حالت استفاده می‌شود، و `useContext` برای مصرف context استفاده می‌شود.",
+              "code": "import { useState, createContext, useContext } from 'react';",
+              "language": "javascript",
+              "blocks": []
+            },
+            {
+              "title": "2. ایجاد یک Context",
+              "description": "یک context با استفاده از `createContext` ایجاد کنید. این context حالت سراسری را نگه می‌دارد و آن را در اختیار کامپوننت‌هایی قرار می‌دهد که به آن نیاز دارند.",
+              "code": "const StoreContext = createContext();",
+              "language": "javascript",
+              "blocks": []
+            },
+            {
+              "title": "3. ایجاد یک Hook سفارشی برای حالت سراسری",
+              "description": "یک hook سفارشی به نام `useGlobalState` ایجاد کنید تا به راحتی به حالت سراسری و اکشن‌ها از هر کامپوننت دسترسی داشته باشید. این hook از `useContext` برای مصرف `StoreContext` استفاده می‌کند.",
+              "code": "export const useGlobalState = () => {\n    return useContext(StoreContext);\n};",
+              "language": "javascript",
+              "blocks": []
+            },
+            {
+              "title": "4. ایجاد یک کامپوننت Provider",
+              "description": "یک کامپوننت `StoreProvider` ایجاد کنید تا برنامه خود را wrap کنید. این کامپوننت حالت سراسری و اکشن‌ها را با استفاده از `StoreContext.Provider` در اختیار فرزندان خود قرار می‌دهد.",
+              "code": "export const StoreProvider = ({ children }) => {\n    // Initial state\n    const [globalState, setGlobalState] = useState({\n        count: 0,\n        name: 'Initial Name',\n        // other global state variables go here\n    });\n\n    // Action to update the state\n    const actions = {\n        update: (key, value) => {\n            setGlobalState(prevState => ({ ...prevState, [key]: value }));\n        },\n        // other actions\n    };\n\n    const value = {\n        globalState,\n        actions,\n    };\n\n    return (\n        <StoreContext.Provider value={value}>\n            {children}\n        </StoreContext.Provider>\n    );\n};",
+              "language": "javascript",
+              "blocks": [
+                {
+                  "title": "حالت اولیه",
+                  "description": "`globalState` با استفاده از hook `useState` مقداردهی اولیه می‌شود. این شامل مقادیر اولیه متغیرهای حالت سراسری شما (به عنوان مثال، `count` و `name`) است.",
+                  "code": "    const [globalState, setGlobalState] = useState({\n        count: 0,\n        name: 'Initial Name',\n        // other global state variables go here\n    });",
+                  "language": "javascript",
+                  "blocks": []
+                },
+                {
+                  "title": "اکشن‌ها",
+                  "description": "شی `actions` شامل توابعی است که می‌توان از آن‌ها برای به‌روزرسانی حالت سراسری استفاده کرد. در این مثال، ما یک اکشن `update` داریم که به شما امکان می‌دهد کلیدهای خاصی را در `globalState` به‌روزرسانی کنید.",
+                  "code": "   const actions = {\n        update: (key, value) => {\n            setGlobalState(prevState => ({ ...prevState, [key]: value }));\n        },\n        // other actions\n    };",
+                  "language": "javascript",
+                  "blocks": []
+                },
+                {
+                  "title": "مقدار",
+                  "description": "شی `value` `globalState` و `actions` را ترکیب می‌کند و آن‌ها را از طریق context در دسترس کامپوننت‌های مصرف‌کننده قرار می‌دهد.",
+                  "code": " const value = {\n        globalState,\n        actions,\n    };",
+                  "language": "javascript",
+                  "blocks": []
+                },
+                {
+                  "title": "Provider",
+                  "description": "`StoreContext.Provider` `value` را برای تمام کامپوننت‌های موجود در محدوده خود در دسترس قرار می‌دهد.",
+                  "code": "  return (\n        <StoreContext.Provider value={value}>\n            {children}\n        </StoreContext.Provider>\n    );",
+                  "language": "javascript",
+                  "blocks": []
+                }
+              ]
+            },
+            {
+              "title": "4. پیاده‌سازی یک کامپوننت تست برای استفاده از Global State",
+              "description": "یک کامپوننت تست ایجاد کنید تا نحوه استفاده از حالت سراسری را نشان دهید. این کامپوننت با استفاده از hook `useGlobalState` به حالت سراسری دسترسی پیدا می‌کند و مقادیر آن را نمایش می‌دهد.",
+              "code": "const TestComponent = () => {\n    const { globalState, actions } = useGlobalState();\n\n    const handleUpdateName = () => {\n        actions.update('name', 'Updated Name');\n    };\n\n    return (\n        <div>\n            <p>Count: {globalState.count}</p>\n            <p>Name: {globalState.name}</p>\n            <button onClick={() => actions.update('count', globalState.count + 1)}>Increment Count</button>\n            <button onClick={handleUpdateName}>Update Name</button>\n        </div>\n    );\n};\n\nexport default TestComponent;",
+              "language": "javascript",
+              "blocks": [
+                {
+                  "title": "دسترسی به Global State",
+                  "description": "از hook `useGlobalState` برای دسترسی به `globalState` و `actions` استفاده می‌شود.",
+                  "code": "const { globalState, actions } = useGlobalState();",
+                  "language": "javascript",
+                  "blocks": []
+                },
+                {
+                  "title": "به‌روزرسانی حالت",
+                  "description": "هندلرهای کلیک دکمه، اکشن‌ها را برای به‌روزرسانی حالت سراسری از طریق متد `actions.update()` که در StoreProvider تعریف کردیم، فراخوانی می‌کنند.",
+                  "code": "   const handleUpdateName = () => {\n        actions.update('name', 'Updated Name');\n    };",
+                  "language": "javascript",
+                  "blocks": []
+                },
+                {
+                  "title": "نمایش حالت",
+                  "description": "کامپوننت، مقادیر `count` و `name` را از حالت سراسری نمایش می‌دهد.",
+                  "code": "<p>Count: {globalState.count}</p>\n<p>Name: {globalState.name}</p>",
+                  "language": "html",
+                  "blocks": []
+                }
+              ]
+            },
+            {
+              "title": "5. استفاده از Global State Manager در App شما",
+              "description": "کامپوننت اصلی `App` خود را با `StoreProvider` wrap کنید تا حالت سراسری در سراسر برنامه شما قابل دسترس باشد.",
+              "code": null,
+              "blocks": [
+                {
+                  "title": "تغییر main.jsx برای گنجاندن StoreProvider و TestComponent",
+                  "description": "مهم: `StoreProvider` و `TestComponent` خود را در کامپوننت اصلی `App` خود در `main.jsx` قرار دهید.",
+                  "code": "//[[src/main.jsx]]\nimport React from 'react'\nimport ReactDOM from 'react-dom/client'\nimport App from './App'\nimport { StoreProvider } from './GlobalStateManager';\n\nReactDOM.createRoot(document.getElementById('root')).render(\n  <React.StrictMode>\n    <StoreProvider>\n        <App />\n    </StoreProvider>\n  </React.StrictMode>,\n)",
+                  "language": "javascript",
+                  "blocks": []
+                },
+                {
+                  "title": "تغییر app.jsx برای گنجاندن TestComponent",
+                  "description": "Import و render کامپوننت‌هایی که از حالت سراسری در `App.jsx` استفاده می‌کنند.",
+                  "code": "//[[src/App.jsx]]\nimport React from 'react';\nimport TestComponent from './GlobalStateManager';\n\nfunction App() {\n  return (\n    <div className=\"App\">\n      <TestComponent />\n    </div>\n  );\n}\n\nexport default App;",
+                  "language": "javascript",
+                  "blocks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "چگونه کار می‌کند",
+          "description": "در این تنظیمات:\n\n1.  **ایجاد Context:** `createContext()` یک context ایجاد می‌کند که حالت سراسری ما را نگه می‌دارد.\n2.  **Provider:** `StoreProvider` حالت را مدیریت می‌کند و آن را در اختیار تمام فرزندان قرار می‌دهد.\n3.  **Hook سفارشی:** `useGlobalState()` یک راه ساده برای دسترسی به حالت و اکشن‌ها در هر کامپوننت فراهم می‌کند.\n4.  **استفاده از کامپوننت:** کامپوننت‌هایی که به حالت سراسری نیاز دارند با استفاده از `useGlobalState()` حالت را می‌خوانند و به‌روزرسانی می‌کنند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "محدودیت‌ها و پیشرفت‌ها",
+          "description": "راه‌حل شرح داده شده یک پیاده‌سازی اساسی از یک مدیریت‌کننده حالت سراسری است و دارای محدودیت‌هایی است:\n\n*   **بازنشانی حالت با تغییر مسیر:** داده‌ها با تغییر مسیر بازنشانی می‌شوند زیرا کامپوننت و در نتیجه حالت آن، با تغییر مسیر دوباره رندر می‌شود. برای جلوگیری از این کار:\n    *   از تکنیک‌هایی مانند local storage، session storage یا یک کتابخانه مدیریت حالت (مثلاً Redux ، Zustand) استفاده کنید.",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    }
+  ]
 }
