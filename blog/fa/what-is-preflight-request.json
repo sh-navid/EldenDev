@@ -1,0 +1,221 @@
+{
+  "title": "درخواست پیش‌پرواز (OPTIONS) چیست و چرا مهم است؟",
+  "description": "توضیحی عمیق از درخواست‌های پیش‌پرواز (OPTIONS) در زمینه توسعه وب، با تمرکز بر اشتراک‌گذاری منابع بین-مرزی (CORS) و چگونگی عملکرد آن‌ها برای اطمینان از ارتباط امن و معتبر بین مبداهای مختلف.",
+  "version": "1.0.0",
+  "blocks": [
+    {
+      "title": "مقدمه",
+      "description": "درخواست‌های پیش‌پرواز بخش مهمی از نحوه مدیریت اشتراک‌گذاری منابع بین-مرزی (CORS) توسط مرورگرهای وب هستند. آن‌ها ایمنی و اعتبار درخواست‌های بین-مرزی را قبل از ارسال درخواست واقعی تضمین می‌کنند. این مقاله درخواست‌های پیش‌پرواز، هدف آن‌ها و نحوه ارتباط آن‌ها با امنیت وب را شرح می‌دهد.",
+      "code": null,
+      "blocks": []
+    },
+    {
+      "title": "درخواست پیش‌پرواز چیست؟",
+      "description": "یک درخواست پیش‌پرواز، درخواست OPTIONS HTTP است که به‌طور خودکار توسط مرورگر قبل از یک درخواست بین-مرزی واقعی ارسال می‌شود. این درخواست برای تعیین ایمن بودن درخواست واقعی برای ارسال استفاده می‌شود. اساساً از سرور می‌پرسد: \"هی، آیا می‌توانم این درخواست را ارسال کنم؟\"",
+      "code": null,
+      "blocks": []
+    },
+    {
+      "title": "چه زمانی درخواست‌های پیش‌پرواز ارسال می‌شوند؟",
+      "description": "درخواست‌های پیش‌پرواز تحت شرایط خاصی که مرورگر درخواست را پیچیده یا بالقوه ناامن می‌داند، فعال می‌شوند. این شرایط عبارتند از:",
+      "code": null,
+      "blocks": [
+        {
+          "title": "درخواست‌های پیچیده",
+          "description": "درخواست‌هایی که از روش‌های غیر از GET، HEAD یا POST استفاده می‌کنند، پیچیده در نظر گرفته می‌شوند. به عنوان مثال، PUT، DELETE و PATCH همیشه یک درخواست پیش‌پرواز را فعال می‌کنند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "هدرهای سفارشی",
+          "description": "درخواست‌هایی که شامل هدرهای سفارشی هستند که بخشی از مجموعه 'ساده' نیستند، نیز یک درخواست پیش‌پرواز را فعال می‌کنند. هدرهای ساده شامل `Accept`، `Accept-Language`، `Content-Language`، `Content-Type` (با مقادیر مجاز خاص) هستند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "Content-Type فراتر از مقادیر ساده",
+          "description": "اگر هدر `Content-Type` روی چیزی غیر از `application/x-www-form-urlencoded`، `multipart/form-data` یا `text/plain` تنظیم شده باشد، یک درخواست پیش‌پرواز ارسال می‌شود.",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "چرا درخواست‌های پیش‌پرواز ضروری هستند؟",
+      "description": "درخواست‌های پیش‌پرواز برای امنیت ضروری هستند. آن‌ها به سرور اجازه می‌دهند تا بررسی کند که آیا درخواست کلاینت بر اساس پیکربندی CORS سرور مجاز است یا خیر. این امر از وب‌سایت‌های مخرب برای ایجاد درخواست‌های غیرمجاز به دامنه‌های دیگر جلوگیری می‌کند.",
+      "code": null,
+      "blocks": []
+    },
+    {
+      "title": "CORS و درخواست‌های پیش‌پرواز",
+      "description": "CORS (اشتراک‌گذاری منابع بین-مرزی) مکانیزمی است که به صفحات وب اجازه می‌دهد تا درخواست‌هایی را به دامنه ای متفاوت از دامنه‌ای که صفحه وب را ارائه کرده است، ارسال کنند. درخواست‌های پیش‌پرواز یک جزء اصلی از CORS هستند.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "CORS چگونه با پیش‌پرواز کار می‌کند",
+          "description": "هنگامی که یک درخواست پیش‌پرواز ارسال می‌شود، مرورگر هدرهای پاسخ را بررسی می‌کند تا تعیین کند آیا درخواست واقعی می‌تواند ادامه یابد یا خیر.",
+          "code": null,
+          "blocks": [
+            {
+              "title": "هدرهای کلیدی CORS",
+              "description": "پاسخ سرور به درخواست OPTIONS باید شامل هدرهای CORS خاصی باشد:",
+              "code": null,
+              "blocks": [
+                {
+                  "title": "Access-Control-Allow-Origin",
+                  "description": "مشخص می‌کند که کدام مبداها مجاز به دسترسی به منبع هستند. می‌تواند یک مبدا خاص (مثلاً `https://example.com`) یا کاراکتر عام `*` باشد (که به طور کلی به دلایل امنیتی توصیه نمی‌شود).",
+                  "code": null,
+                  "blocks": []
+                },
+                {
+                  "title": "Access-Control-Allow-Methods",
+                  "description": "روش‌های HTTP مجاز را مشخص می‌کند (به عنوان مثال، `GET، POST، PUT، DELETE`).",
+                  "code": null,
+                  "blocks": []
+                },
+                {
+                  "title": "Access-Control-Allow-Headers",
+                  "description": "هدرهای HTTP مجاز در درخواست واقعی را مشخص می‌کند (به عنوان مثال، `Content-Type, Authorization`).",
+                  "code": null,
+                  "blocks": []
+                },
+                {
+                  "title": "Access-Control-Allow-Credentials",
+                  "description": "نشان می‌دهد که آیا درخواست واقعی می‌تواند شامل اعتبارنامه‌ها (مانند کوکی‌ها، هدرهای مجوز) باشد. اگر این مقدار `true` باشد، `Access-Control-Allow-Origin` نمی‌تواند `*` باشد.",
+                  "code": null,
+                  "blocks": []
+                },
+                {
+                  "title": "Access-Control-Max-Age",
+                  "description": "مشخص می‌کند که نتایج درخواست پیش‌پرواز برای چه مدت (بر حسب ثانیه) می‌توانند توسط مرورگر کش شوند. این می‌تواند تعداد درخواست‌های OPTIONS را کاهش دهد.",
+                  "code": null,
+                  "blocks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "جریان یک درخواست با پیش‌پرواز",
+          "description": "1. **مرورگر آغاز می‌کند:** یک درخواست بین-مرزی انجام می‌شود. <br> 2. **مرورگر بررسی می‌کند:** آیا این یک درخواست ساده است؟ اگر نه، یک درخواست پیش‌پرواز ارسال می‌شود. <br> 3. **درخواست پیش‌پرواز (OPTIONS):** مرورگر یک درخواست OPTIONS را با هدرهای مرتبط (به عنوان مثال، `Origin`، `Access-Control-Request-Method`، `Access-Control-Request-Headers`) به سرور ارسال می‌کند. <br> 4. **سرور پاسخ می‌دهد:** سرور به درخواست OPTIONS با هدرهای CORS پاسخ می‌دهد. <br> 5. **مرورگر تأیید می‌کند:** مرورگر هدرهای پاسخ را بررسی می‌کند تا ببیند آیا درخواست مجاز است یا خیر. اگر مجاز باشد، درخواست واقعی ارسال می‌شود. اگر مجاز نباشد، درخواست مسدود می‌شود.",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "سناریوی مثال",
+      "description": "بیایید فرض کنیم یک برنامه وب که در `https://example.com` میزبانی می‌شود، می‌خواهد یک درخواست POST با هدر سفارشی `X-Custom-Header` به `https://api.example.com` ارسال کند.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "1. سمت کلاینت (example.com)",
+          "description": "کد جاوااسکریپت در example.com یک درخواست POST را آغاز می‌کند.",
+          "code": "```javascript\n//[[src/client.js]]\nfetch('https://api.example.com/data', {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json',\n    'X-Custom-Header': 'value',\n  },\n  body: JSON.stringify({ data: 'some data' }),\n})\n.then(response => {\n  if (!response.ok) {\n    throw new Error('Network response was not ok');\n  }\n  return response.json();\n})\n.then(data => console.log(data))\n.catch(error => console.error('Error:', error));\n```",
+          "language": "javascript",
+          "blocks": []
+        },
+        {
+          "title": "2. درخواست پیش‌پرواز (OPTIONS) به api.example.com",
+          "description": "مرورگر به‌طور خودکار یک درخواست OPTIONS را به `https://api.example.com/data` ارسال می‌کند تا بررسی کند که آیا روش POST و `X-Custom-Header` مجاز هستند یا خیر.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "3. سمت سرور (api.example.com)",
+          "description": "سرور در `api.example.com` باید پیکربندی شود تا درخواست OPTIONS را مدیریت کند و با هدرهای CORS صحیح پاسخ دهد.",
+          "code": "```bash\n#[[Terminal]]\n# (مثال با استفاده از Node.js و Express)\n# با فرض اینکه Express نصب کرده‌اید\n\n# نصب میان‌افزار cors\nnpm install cors\n```",
+          "language": "bash",
+          "blocks": []
+        },
+        {
+          "title": "4. سمت سرور (api.example.com) - با CORS",
+          "description": "مثال کد Node.js با استفاده از میان‌افزار `cors` برای مدیریت درخواست OPTIONS و اجازه درخواست POST با هدر سفارشی:",
+          "code": "```javascript\n//[[src/server.js]]\nconst express = require('express');\nconst cors = require('cors');\nconst app = express();\nconst port = 3000;\n\n// فعال کردن CORS برای همه مبداها (برای اهداف نمایشی؛ در تولید، مبداها را مشخص کنید)\nconst corsOptions = {\n  origin: 'https://example.com', // جایگزین با مبدا واقعی\n  methods: 'GET,POST,PUT,DELETE,OPTIONS',\n  allowedHeaders: 'Content-Type,X-Custom-Header,Authorization'\n};\n\napp.use(cors(corsOptions));\napp.use(express.json()); // برای تجزیه application/json\n\napp.options('*', cors(corsOptions));  // مدیریت درخواست‌های OPTIONS پیش‌پرواز\n\napp.post('/data', (req, res) => {\n  console.log('Received data:', req.body);\n  res.json({ message: 'Data received successfully' });\n});\n\napp.listen(port, () => {\n  console.log(`Server listening on port ${port}`);\n});\n```",
+          "language": "javascript",
+          "blocks": []
+        },
+        {
+          "title": "5. پاسخ سرور (مهم)",
+          "description": "اگر پیکربندی CORS در سرور صحیح باشد، پاسخ درخواست پیش‌پرواز حاوی هدرهای لازم برای اجازه درخواست POST واقعی خواهد بود. در غیر این صورت، مرورگر درخواست را مسدود می‌کند.",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "مدیریت درخواست‌های پیش‌پرواز در سرور",
+      "description": "سرور باید صراحتاً درخواست‌های OPTIONS را مدیریت کرده و با هدرهای CORS مناسب پاسخ دهد. در اینجا خلاصه‌ای از عناصر کلیدی آورده شده است:",
+      "code": null,
+      "blocks": [
+        {
+          "title": "اطمینان از هدرهای CORS مناسب",
+          "description": "سرور باید هدرهای `Access-Control-Allow-*` صحیح را در پاسخ به درخواست OPTIONS برگرداند. این هدرها باید با آنچه کلاینت در تلاش برای انجام آن است همسو باشند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "روش‌ها",
+          "description": "`Access-Control-Allow-Methods` باید شامل روش‌های HTTP باشد که کلاینت استفاده می‌کند (به عنوان مثال، `POST`، `GET`، `PUT`، `DELETE`).",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "هدرها",
+          "description": "`Access-Control-Allow-Headers` باید شامل هدرهای سفارشی باشد که کلاینت ارسال می‌کند (به عنوان مثال، `X-Custom-Header`، `Authorization`). همچنین در صورت وجود بدنه در درخواست، باید هدر `Content-Type` را مجاز کند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "مبدا",
+          "description": "`Access-Control-Allow-Origin` باید مبدا(های) مجاز برای انجام درخواست را مشخص کند. برای تولید، بهتر است در مورد مبداهای مجاز خاص باشید. استفاده از کاراکتر عام (*) به طور کلی به جز در موارد بسیار خاص توصیه نمی‌شود. اگر مبدا مطابقت نداشته باشد، دسترسی رد می‌شود.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "اعتبارنامه‌ها",
+          "description": "اگر از اعتبارنامه‌ها (کوکی‌ها، هدرهای مجوز) استفاده می‌کنید، `Access-Control-Allow-Credentials: true` را تنظیم کنید. اگر این مقدار true باشد، *نمی‌توانید* از کاراکتر عام برای`Access-Control-Allow-Origin` استفاده کنید. باید یک مبدا صریح را مشخص کنید.",
+          "code": null,
+          "blocks": []
+        },
+    {
+        "title": "استفاده از کتابخانه‌های میان‌افزار",
+        "description": "اکثر فریم‌ورک‌های وب، میان‌افزارهایی را برای ساده‌سازی پیکربندی CORS ارائه می‌دهند. به عنوان مثال: `cors` در Node.js، Django CORS Headers در Python و غیره.",
+        "code": null,
+        "blocks": []
+    }
+      ]
+    },
+    {
+      "title": "عیب‌یابی و مشکلات رایج",
+      "description": "مشکلات رایج و نحوه عیب‌یابی آن‌ها عبارتند از:",
+      "code": null,
+      "blocks": [
+        {
+          "title": "خطاهای CORS در کنسول مرورگر",
+          "description": "به دنبال پیام‌های خطا در کنسول توسعه‌دهنده مرورگر باشید. این پیام‌های خطا معمولاً اطلاعاتی در مورد مشکل ارائه می‌دهند (به عنوان مثال، `Access-Control-Allow-Origin` گم شده، متد نامعتبر، هدر نامعتبر و غیره).",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "هدرهای CORS گم شده یا نادرست",
+          "description": "اطمینان حاصل کنید که سرور هدرهای CORS صحیح را در پاسخ‌های OPTIONS و / یا درخواست واقعی ارسال می‌کند. از ابزارهای توسعه‌دهنده مرورگر (برگه Network) برای بررسی هدرها استفاده کنید.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "`Access-Control-Allow-Origin` نادرست",
+          "description": "اطمینان حاصل کنید که هدر `Access-Control-Allow-Origin` با مبدا برنامه سمت کلاینت مطابقت دارد. استفاده از کاراکتر عام `*` ممکن است برای تست کار کند، اما در تولید، مبدا دقیق را مشخص کنید.",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "نتیجه‌گیری",
+      "description": "درخواست‌های پیش‌پرواز جنبه‌ای اساسی از امنیت وب و CORS هستند. درک نحوه عملکرد آن‌ها و نحوه پیکربندی سرور خود برای مدیریت صحیح آن‌ها برای ایجاد برنامه‌های وب قوی و ایمن که با منابع از مبداهای مختلف تعامل دارند، بسیار مهم است. به طور منظم پیکربندی CORS خود را آزمایش کنید تا اطمینان حاصل شود که با الزامات و خط‌مشی‌های امنیتی برنامه شما مطابقت دارد.",
+      "code": null,
+      "blocks": []
+    }
+  ]
+}

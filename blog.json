@@ -61,6 +61,17 @@
           "validated": false
         }
       ]
+    },
+    {
+      "title": "Web/Network",
+      "Blogs": [
+        {
+          "image": "Other",
+          "state": "active",
+          "path": "/blog/:lang/what-is-preflight-request",
+          "validated": false
+        }
+      ]
     }
   ]
 }
