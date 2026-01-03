@@ -137,8 +137,8 @@
                 {
                   "title": "Displaying the State",
                   "description": "The component displays the values of the `count` and `name` from the global state.",
-                  "code": " <p>Count: {globalState.count}</p>\n<p>Name: {globalState.name}</p>",
-                  "language": "javascript",
+                  "code": "<p>Count: {globalState.count}</p>\n<p>Name: {globalState.name}</p>",
+                  "language": "html",
                   "blocks": []
                 }
               ]
@@ -152,14 +152,14 @@
                   "title": "Modify main.jsx to include StoreProvider and TestComponent",
                   "description": "Important: Include the `StoreProvider` and your `TestComponent` within your main `App` component in `main.jsx`.",
                   "code": "//[[src/main.jsx]]\nimport React from 'react'\nimport ReactDOM from 'react-dom/client'\nimport App from './App'\nimport { StoreProvider } from './GlobalStateManager';\n\nReactDOM.createRoot(document.getElementById('root')).render(\n  <React.StrictMode>\n    <StoreProvider>\n        <App />\n    </StoreProvider>\n  </React.StrictMode>,\n)",
-                  "language": "jsx",
+                  "language": "javascript",
                   "blocks": []
                 },
                 {
                   "title": "Modify app.jsx to include TestComponent",
                   "description": "Import and render the components that use the global state in `App.jsx`.",
                   "code": "//[[src/App.jsx]]\nimport React from 'react';\nimport TestComponent from './GlobalStateManager';\n\nfunction App() {\n  return (\n    <div className=\"App\">\n      <TestComponent />\n    </div>\n  );\n}\n\nexport default App;",
-                  "language": "jsx",
+                  "language": "javascript",
                   "blocks": []
                 }
               ]
