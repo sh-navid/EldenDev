@@ -1,0 +1,219 @@
+{
+  "title": "بهترین روش‌ها و پیاده‌سازی‌های i18n در React",
+  "description": "با بهترین روش‌ها و پیاده‌سازی‌های عملی بین‌المللی‌سازی (i18n) در برنامه‌های React آشنا شوید. یاد بگیرید چگونه برنامه‌های React خود را چند زبانه کنید، و اطمینان حاصل کنید که مخاطبان جهانی می‌توانند به محتوای شما دسترسی داشته باشند و آن را درک کنند.",
+  "blocks": [
+    {
+      "title": "مقدمه‌ای بر بین‌المللی‌سازی (i18n)",
+      "description": "بین‌المللی‌سازی (i18n) فرآیند طراحی و توسعه برنامه‌های نرم‌افزاری به گونه‌ای است که می‌توانند به راحتی با زبان‌ها و مناطق مختلف سازگار شوند، بدون آنکه نیاز به تغییرات مهندسی باشد. این امکان را به برنامه‌ها می‌دهد تا از چندین موقعیت مکانی (ترکیب زبان و منطقه) پشتیبانی کنند.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "مفاهیم کلیدی",
+          "description": "درک مفاهیم اصلی i18n برای پیاده‌سازی مؤثر ضروری است.",
+          "code": null,
+          "blocks": [
+            {
+              "title": "موقعیت مکانی (Locale)",
+              "description": "یک موقعیت مکانی ترکیبی از زبان و منطقه است، مانند `en-US` (انگلیسی، ایالات متحده) یا `fr-CA` (فرانسوی، کانادا).",
+              "code": null,
+              "blocks": []
+            },
+            {
+              "title": "بومی‌سازی (l10n)",
+              "description": "بومی‌سازی فرآیند تطبیق یک برنامه بین‌المللی‌شده برای یک موقعیت مکانی خاص است. این شامل ترجمه متن، قالب‌بندی تاریخ‌ها، ارزها و انطباق با جنبه‌های فرهنگی است.",
+              "code": null,
+              "blocks": []
+            },
+            {
+              "title": "ترجمه",
+              "description": "فرآیند تبدیل متن از یک زبان به زبان دیگر.",
+              "code": null,
+              "blocks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "بهترین روش‌ها برای i18n در React",
+      "description": "پیروی از بهترین روش‌ها، یک برنامه چندزبانه قابل نگهداری، مقیاس‌پذیر و کاربرپسند را تضمین می‌کند.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "۱. جدا کردن محتوا از کد",
+          "description": "همه محتوای قابل ترجمه (متن، برچسب‌ها و غیره) را خارج از کامپوننت‌های React خود ذخیره کنید. از فایل‌های ترجمه جداگانه (به عنوان مثال، JSON، YAML) برای هر زبان استفاده کنید.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "۲. انتخاب یک کتابخانه i18n",
+          "description": "یک کتابخانه i18n که به خوبی نگهداری شده است را برای React انتخاب کنید. انتخاب‌های محبوب شامل `react-i18next`، `i18next` یا `LinguiJS` هستند. این کتابخانه‌ها ویژگی‌هایی مانند مدیریت ترجمه، جمع‌بندی (pluralization)، قالب‌بندی و تشخیص زبان را ارائه می‌دهند.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "۳. سازماندهی فایل‌های ترجمه",
+          "description": "فایل‌های ترجمه را به روشی ساختارمند سازماندهی کنید تا بتوانید ترجمه‌ها را به راحتی مدیریت کنید. یک ساختار رایج شامل یک دایرکتوری برای هر زبان و فایل‌هایی است که شامل جفت‌های کلید-مقدار از رشته‌های ترجمه هستند.",
+          "code": null,
+          "blocks": [
+            {
+              "title": "مثال ساختار فایل",
+              "description": "مثالی از سازماندهی فایل‌های ترجمه.",
+              "code": null,
+              "blocks": [
+                {
+                  "code": "locales/\n├── fa/\n│   └── translation.json\n├── en/\n│   └── translation.json\n└── de/\n    └── translation.json",
+                  "language": "text",
+                  "blocks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "۴. استفاده از کلیدهای ترجمه",
+          "description": "از کلیدهای منحصربه‌فرد برای هر رشته قابل ترجمه استفاده کنید. این رویکرد ثبات را تضمین می‌کند و مدیریت ترجمه‌ها را آسان‌تر می‌کند. به جای کدگذاری مستقیم رشته‌ها، از کلیدها برای واکشی ترجمه‌ها استفاده کنید.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "۵. رسیدگی به جمع‌بندی (Pluralization)",
+          "description": "از ویژگی‌های جمع‌بندی کتابخانه i18n برای رسیدگی به فرم‌های مختلف کلمات بر اساس کمیت استفاده کنید. این امر به ویژه برای زبان‌هایی که چندین فرم جمع دارند مهم است.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "۶. قالب‌بندی تاریخ‌ها، اعداد، و ارزها",
+          "description": "از ویژگی‌های قالب‌بندی کتابخانه i18n برای قالب‌بندی تاریخ‌ها، اعداد و ارزها با توجه به موقعیت مکانی کاربر استفاده کنید. این اطمینان می‌دهد که برنامه این مقادیر را به شیوه‌ای مناسب از نظر فرهنگی نمایش می‌دهد.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "۷. در نظر گرفتن زبان‌های RTL (راست به چپ)",
+          "description": "اگر برنامه شما از زبان‌هایی که از راست به چپ نوشته می‌شوند (مانند عربی، فارسی) پشتیبانی می‌کند، پیامدهای طرح و طراحی را در نظر بگیرید. از CSS برای رسیدگی به جهت متن استفاده کنید و طرح را بر این اساس تنظیم کنید.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "۸. ارائه تغییر زبان",
+          "description": "به کاربران خود اجازه دهید به راحتی زبان‌ها را تغییر دهند. یک رابط انتخاب زبان ارائه دهید و موقعیت مکانی برنامه را بر این اساس به‌روزرسانی کنید.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "۹. تست کامل",
+          "description": "برنامه خود را در تمام زبان‌های پشتیبانی شده آزمایش کنید تا اطمینان حاصل شود که ترجمه‌ها دقیق هستند، طرح صحیح است و تجربه کاربری سازگار است.",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "پیاده‌سازی با react-i18next",
+      "description": "این بخش یک راهنمای گام به گام در مورد چگونگی پیاده‌سازی i18n با استفاده از کتابخانه `react-i18next` ارائه می‌دهد.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "۱. نصب",
+          "description": "`react-i18next` و `i18next` را در پروژه خود نصب کنید.",
+          "code": "#[[Terminal]]\nnpm install react-i18next i18next",
+          "blocks": []
+        },
+        {
+          "title": "۲. ایجاد فایل‌های ترجمه",
+          "description": "یک دایرکتوری (مانند `locales`) برای ذخیره فایل‌های ترجمه خود ایجاد کنید. در داخل دایرکتوری، زیردایرکتوری‌هایی برای هر زبان (به عنوان مثال، `en`، `fr`) ایجاد کنید. یک فایل `translation.json` در هر دایرکتوری زبان ایجاد کنید.",
+          "code": null,
+          "blocks": [
+            {
+              "title": "مثال: locales/fa/translation.json",
+              "description": "مثال فایل ترجمه برای فارسی.",
+              "code": "{\n  \"greeting\": \"سلام دنیا!\",\n  \"welcome\": \"خوش آمدید، {{name}} !\",\n  \"count_apples_plural\": \"{{count}} سیب\",\n  \"count_apples_plural_other\": \"{{count}} سیب ها\"\n}",
+              "language": "json",
+              "blocks": []
+            },
+            {
+              "title": "Example: locales/en/translation.json",
+              "description": "مثال فایل ترجمه برای انگلیسی.",
+              "code": "{\n  \"greeting\": \"Hello, world!\",\n  \"welcome\": \"Welcome, {{name}}!\",\n  \"count_apples_plural\": \"{{count}} apple\",\n  \"count_apples_plural_other\": \"{{count}} apples\"\n}",
+              "language": "json",
+              "blocks": []
+            },
+            {
+              "title": "Example: locales/de/translation.json",
+              "description": "مثال فایل ترجمه برای آلمانی.",
+              "code": "{\n  \"greeting\": \"Hallo Welt!\",\n  \"welcome\": \"Willkommen, {{name}}!\",\n  \"count_apples_plural\": \"{{count}} Apfel\",\n  \"count_apples_plural_other\": \"{{count}} Äpfel\"\n}",
+              "language": "json",
+              "blocks": []
+            }
+          ]
+        },
+        {
+          "title": "۳. پیکربندی i18next",
+          "description": "یک فایل `i18n.js` برای پیکربندی `i18next` و بارگذاری ترجمه‌ها ایجاد کنید. این فایل i18next را مقداردهی اولیه می‌کند و تشخیص زبان و بارگذاری ترجمه‌ها را تنظیم می‌کند. همچنین شامل گزینه‌های قالب‌بندی و سایر ویژگی‌ها خواهد بود.",
+          "code": "//[[src/i18n.js]]\nimport i18next from 'i18next';\nimport { initReactI18next } from 'react-i18next';\nimport LanguageDetector from 'i18next-browser-languagedetector';\nimport enTranslation from '../locales/en/translation.json';\nimport frTranslation from '../locales/fr/translation.json';\nimport faTranslation from '../locales/fa/translation.json';\nimport deTranslation from '../locales/de/translation.json';\n\ni18next\n  .use(LanguageDetector)\n  .use(initReactI18next)\n  .init({\n    resources: {\n      en: {\n        translation: enTranslation,\n      },\n      fr: {\n        translation: frTranslation,\n      },\n      fa: {\n        translation: faTranslation,\n      },\n       de: {\n        translation: deTranslation,\n      },\n    },\n    fallbackLng: 'en', // default language\n    interpolation: {\n      escapeValue: false, // not needed for react as it escapes by default\n    },\n    detection: {\n      order: ['localStorage', 'navigator'], // order of detection methods\n      lookupLocalStorage: 'i18nextLng',   // key for storing language in localStorage\n      caches: ['localStorage'],\n    },\n  });\n\nexport default i18next;",
+          "language": "javascript",
+          "blocks": []
+        },
+        {
+          "title": "۴. برنامه خود را با i18nextProvider محصور کنید",
+          "description": "کامپوننت اصلی برنامه خود را با `I18nextProvider` محصور کنید. این باعث می شود تابع `t` (برای ترجمه) برای همه کامپوننت ها در دسترس باشد.",
+          "code": "//[[src/main.jsx]]\nimport React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport App from './App';\nimport { I18nextProvider } from 'react-i18next';\nimport i18n from './i18n';\n\nconst root = ReactDOM.createRoot(document.getElementById('root'));\nroot.render(\n  <React.StrictMode>\n    <I18nextProvider i18n={i18n}>\n      <App />\n    </I18nextProvider>\n  </React.StrictMode>\n);\n",
+          "language": "javascript",
+          "blocks": []
+        },
+        {
+          "title": "۵. از تابع t در کامپوننت‌های خود استفاده کنید",
+          "description": "`useTranslation` را از `react-i18next` وارد کنید و از تابع `t` برای ترجمه رشته‌ها استفاده کنید.",
+          "code": "//[[src/App.jsx]]\nimport React from 'react';\nimport { useTranslation } from 'react-i18next';\n\nfunction App() {\n  const { t } = useTranslation();\n\n  return (\n    <div className=\"App\">\n      <h1>{t('greeting')}</h1>\n      <p>{t('welcome', { name: 'User' })}</p>\n      <p>{t('count_apples_plural', { count: 2 })}</p>\n    </div>\n  );\n}\n\nexport default App;",
+          "language": "javascript",
+          "blocks": []
+        },
+        {
+          "title": "۶. افزودن تغییر زبان",
+          "description": "یک کامپوننت سوئیچ‌کننده زبان پیاده‌سازی کنید تا به کاربران اجازه دهید زبان دلخواه خود را انتخاب کنند.",
+          "code": "//[[src/LanguageSwitcher.jsx]]\nimport React from 'react';\nimport { useTranslation } from 'react-i18next';\n\nfunction LanguageSwitcher() {\n  const { i18n } = useTranslation();\n\n  const changeLanguage = (lng) => {\n    i18n.changeLanguage(lng);\n  };\n\n  return (\n    <div>\n      <button onClick={() => changeLanguage('en')}>English</button>\n      <button onClick={() => changeLanguage('fr')}>French</button>\n      <button onClick={() => changeLanguage('fa')}>Persian</button>\n      <button onClick={() => changeLanguage('de')}>German</button>\n    </div>\n  );\n}\n\nexport default LanguageSwitcher;",
+          "language": "javascript",
+          "blocks": []
+        },
+        {
+          "title": "۷. شامل LanguageSwitcher در App.js",
+          "description": "کامپوننت LanguageSwitcher را در داخل کامپوننت اصلی App وارد و استفاده کنید.",
+          "code": "//[[src/App.jsx]]\nimport React from 'react';\nimport { useTranslation } from 'react-i18next';\nimport LanguageSwitcher from './LanguageSwitcher';\n\nfunction App() {\n  const { t } = useTranslation();\n\n  return (\n    <div className=\"App\">\n      <LanguageSwitcher/>\n      <h1>{t('greeting')}</h1>\n      <p>{t('welcome', { name: 'User' })}</p>\n      <p>{t('count_apples_plural', { count: 2 })}</p>\n    </div>\n  );\n}\n\nexport default App;",
+          "language": "javascript",
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "ویژگی‌های پیشرفته",
+      "description": "ویژگی‌های پیشرفته‌ای را که توسط کتابخانه‌های i18n ارائه می‌شوند بررسی کنید.",
+      "code": null,
+      "blocks": [
+        {
+          "title": "جمع‌بندی (Pluralization)",
+          "description": "رسیدگی به فرم‌های جمع مختلف در زبان‌های مختلف با استفاده از ویژگی‌های جمع‌بندی کتابخانه i18n (به عنوان مثال، `count_apples_plural` و `count_apples_plural_other` در فایل‌های JSON مثال).",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "قالب‌بندی تاریخ‌ها و اعداد",
+          "description": "قالب‌بندی تاریخ‌ها و اعداد بر اساس موقعیت مکانی کاربر با استفاده از قابلیت‌های قالب‌بندی کتابخانه. این اغلب شامل استفاده از گزینه‌های قالب‌بندی خاصی است که مربوط به موقعیت مکانی کاربر است.",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "ترجمه‌های متنی",
+          "description": "از ترجمه‌های متنی برای ارائه ترجمه‌های مختلف بر اساس متن استفاده کنید. این برای حل ابهام و ایجاد ترجمه‌های دقیق‌تر بسیار مفید است.",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "title": "نتیجه‌گیری",
+      "description": "پیاده‌سازی i18n در برنامه React شما برای دستیابی به مخاطبان جهانی بسیار مهم است. با پیروی از بهترین روش‌ها و استفاده از کتابخانه‌هایی مانند `react-i18next`، می‌توانید یک برنامه چندزبانه ایجاد کنید که به راحتی قابل نگهداری و مقیاس‌پذیر باشد. به یاد داشته باشید که جداسازی محتوا، استفاده از کلیدهای ترجمه، رسیدگی به جمع‌بندی، قالب‌بندی داده‌ها و اجازه تغییر زبان را برای یک تجربه کاربری یکپارچه در اولویت قرار دهید.",
+      "code": null,
+      "blocks": []
+    }
+  ]
+}

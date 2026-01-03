@@ -34,6 +34,16 @@
           "github":"https://github.com/sh-navid/blog/example/react/state_manager_from_scratch"
         }
       ]
+    },
+    {
+      "title": "Programming/Frontend/ReactJs",
+      "Blogs": [
+        {
+          "image": "Other",
+          "state": "active",
+          "path": "/blog/:lang/i18n-best-practices-and-implementations"
+        }
+      ]
     }
   ]
 }
