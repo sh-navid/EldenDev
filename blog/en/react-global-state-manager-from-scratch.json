@@ -1,4 +1,31 @@
 {
   "title": "Building a Global State Manager in React from Scratch",
-  "description": "Learn how to create a simple, yet effective, global state manager in React without relying on external libraries like Redux or Zustand. Understand the core concepts and build a custom solution for managing application-wide state."
+  "description": "Learn how to create a simple, yet effective, global state manager in React without relying on external libraries like Redux or Zustand. Understand the core concepts and build a custom solution for managing application-wide state.",
+  "blocks": [
+    {
+      "title": "What is State Manager?",
+      "description": "",
+      "code": null,
+      "blocks": []
+    },
+    {
+      "title": "Famous State Managers?",
+      "description": "",
+      "code": null,
+      "blocks": [
+        {
+          "title": "Candidate1",
+          "description": "",
+          "code": null,
+          "blocks": []
+        },
+        {
+          "title": "Candidate2",
+          "description": "",
+          "code": null,
+          "blocks": []
+        }
+      ]
+    }
+  ]
 }
