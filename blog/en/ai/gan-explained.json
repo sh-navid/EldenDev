@@ -1,7 +1,7 @@
 {
   "title": "Generative Adversarial Networks (GANs) Explained",
-  "description": "An introduction to Generative Adversarial Networks (GANs), covering their basic components, how they work, and their applications.",
-  "version": "1.0.0",
+  "description": "An introduction to Generative Adversarial Networks (GANs), covering their basic components, how they work, and their applications, including an analogy using police and a thief.",
+  "version": "1.1.0",
   "blocks": [
     {
       "title": "Introduction to Generative Adversarial Networks (GANs)",
@@ -34,37 +34,43 @@
       "code": null,
       "blocks": [
         {
+          "title": "Police and Thief Analogy",
+          "description": "Think of the generator as a thief, trying to create counterfeit money (fake data). The discriminator is like the police, trying to identify fake money.",
+          "code": null,
+          "blocks": []
+        },
+        {
           "title": "The Training Loop",
           "description": "The training process involves the following steps:",
           "code": null,
           "blocks": [
             {
-              "title": "1. Generator Produces Fake Data",
-              "description": "The generator takes random noise as input and creates fake data.",
+              "title": "1. Thief Produces Fake Data",
+              "description": "The thief (generator) creates counterfeit money (fake data).",
               "code": null,
               "blocks": []
             },
             {
-              "title": "2. Discriminator Evaluates Data",
-              "description": "The discriminator receives both real data from the training set and the fake data produced by the generator. It tries to identify which data is real and which is fake.",
+              "title": "2. Police Evaluates Data",
+              "description": "The police (discriminator) examines both real money (real data) and the counterfeit money (fake data), trying to determine which is which.",
               "code": null,
               "blocks": []
             },
             {
               "title": "3. Loss Calculation",
-              "description": "The discriminator and generator's performance are evaluated and calculated using loss functions. The discriminator's loss measures how well it can distinguish between real and fake data. The generator's loss measures how well it can fool the discriminator.",
+              "description": "The police (discriminator) and thief (generator) performance are evaluated with loss functions. The police's loss measures how well the police detects counterfeit money. The thief's loss measures how well the thief can fool the police.",
               "code": null,
               "blocks": []
             },
             {
               "title": "4. Optimization",
-              "description": "The generator and discriminator weights are updated based on their respective losses using optimization algorithms (e.g., stochastic gradient descent).  The generator aims to minimize its loss by creating more realistic data, and the discriminator aims to minimize its loss by becoming better at distinguishing real from fake data.",
+              "description": "The thief (generator) learns to make more realistic counterfeit money to fool the police. The police (discriminator) learns to better identify counterfeit money. This is done using optimization algorithms (e.g., stochastic gradient descent).",
               "code": null,
               "blocks": []
             },
             {
               "title": "5. Repeat",
-              "description": "Steps 1-4 are repeated iteratively, causing the generator and discriminator to improve over time.",
+              "description": "Steps 1-4 are repeated iteratively, with both the thief and the police improving over time. The thief gets better at faking and the police gets better at detecting.  Eventually, the thief produces very realistic counterfeits that are difficult to distinguish, or the police become very skilled at detection.",
               "code": null,
               "blocks": []
             }
