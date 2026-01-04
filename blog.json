@@ -33,7 +33,7 @@
         },
         {
           "image": "Other",
-          "state": "deactive",
+          "state": "active",
           "path": "/blog/:lang/ai/gan-explained",
           "validated": false
         }

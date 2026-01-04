@@ -16,20 +16,6 @@
 5. Training the Neural Network
 6. Testing the Neural Network
 
-## Generative Adversarial Networks (GAN)
-
-### Steps
-1. Define Generator
-   1. Create a function to generate random noise
-2. Define Discriminator
-   1. Create a function to distinguish between real and generated data
-3. Generate Fake Data
-4. Define a Training Loop
-   1. Discriminator learns to distinguish between fake and real data
-   1. Generator learns to create data that fools the Discriminator
-   1. Each one tries to learn to outdo the other
-5. Evaluate the GAN
-
 ## Artificial Intelligence (AI)
 
 ### AI Domains
