@@ -120,7 +120,7 @@
         },
         {
           "image": "Other",
-          "state": "deactive",
+          "state": "active",
           "path": "/blog/:lang/devops/infrastructure-as-code-with-terraform",
           "validated": false
         }
